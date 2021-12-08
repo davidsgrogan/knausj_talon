@@ -48,5 +48,8 @@ class Actions:
     def terminal_kill_all():
         """kills the running command"""
         actions.key("ctrl-c")
-        actions.insert("y")
-        actions.key("enter")
+#        actions.insert("y")
+#        actions.key("enter")
+
+    def terminal_vim():
+        actions.insert("vim ")

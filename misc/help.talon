@@ -12,3 +12,7 @@ help active$: user.help_context_enabled()
 help search <user.text>$: user.help_search(text)
 help context {user.help_contexts}$: user.help_selected_context(help_contexts)
 help help: user.help_search("help")
+
+# https://github.com/AndreasArvidsson/andreas-talon/blob/master/misc/help/help_active_context.py
+# more at https://github.com/AndreasArvidsson/andreas-talon/tree/master/misc/talon_helpers
+^help active context$:                 user.help_active_context_toggle()
