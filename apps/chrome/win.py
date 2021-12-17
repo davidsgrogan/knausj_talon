@@ -1,7 +1,7 @@
 from talon import Context, actions
 ctx = Context()
 ctx.matches = r"""
-os: windows
+os: linux
 app: chrome
 """
 ctx.tags = ['browser', 'user.tabs']
