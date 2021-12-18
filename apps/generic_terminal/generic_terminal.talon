@@ -17,8 +17,9 @@ veal: user.terminal_vim()
 #vim: actions.insert("vim ")
 print dir:                     "pwd\n"
 grep:                          "grep "
-low: "ll "
-low <user.text>: "ll {text}"
+#low: "ll "
+#low <user.text>: "ll {text}"
+later <user.text>: "ll -tr {text}"
 later: "ll -tr "
 
 # https://github.com/AndreasArvidsson/andreas-talon/tree/master/apps/terminal
@@ -33,20 +34,23 @@ word count:                    "wc "
 cat:                           "cat "
 diff:                          "diff "
 pipe:                          " | "
-talon dir: "cd $HOME/.talon/user/knausj_talon\n"
+sim link:                      "ln -s "
+el dap: "dgrogan"
+talon (dir | dear): "cd $HOME/.talon/user/knausj_talon\n"
 secure copy: "scp "
 secure shell: "ssh dgrogan.sfo.corp.google.com"
 credentials: "gcert\n"
-el dap: "dgrogan"
+goma start: "goma ensure_start\n"
+goma stop: "goma stop\n"
 
-home dear: "cd\n"
+home (dir | dear): "cd\n"
 go back: "cd -\n"
-up dear dear: "cd ../..\n"
-up dear$: "cd ..\n"
-push deer:
+up (dir | dear) (dir | dear): "cd ../..\n"
+up (dir | dear)$: "cd ..\n"
+push (dir | dear):
   "pushd ."
   key("enter")
-pop deer:
+pop (dir | dear):
   "popd"
   key("enter")
 
