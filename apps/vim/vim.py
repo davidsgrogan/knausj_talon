@@ -7,14 +7,14 @@ import logging
 
 from talon import Context, Module, actions, app, settings, ui, scripting
 
+logger = logging.getLogger("talon.vim")
 try:
     import pynvim
-
     has_pynvim = True
-except Exception:
+except Exception as e:
+    logger.debug(str(e))
+    logger.debug("doesn't have it")
     has_pynvim = False
-
-logger = logging.getLogger("talon.vim")
 
 mod = Module()
 ctx = Context()
@@ -972,13 +972,16 @@ class NeoVimRPC:
         self.nvim = None
 
         if settings.get("user.vim_use_rpc") == 0:
+            self.debug_print("not using it")
             return
 
         self.rpc_path = self.get_active_rpc()
+        logger.debug("rpc_path = %s" % self.rpc_path)
         if self.rpc_path is not None:
             try:
                 self.nvim = pynvim.attach("socket", path=self.rpc_path)
             except RuntimeError:
+                self.debug_print("got error")
                 return
             self.init_ok = True
         else:
@@ -1183,10 +1186,11 @@ class VimMode:
     def mode(self):
         if self.nvrpc.init_ok is True:
             mode = self.nvrpc.get_active_mode()["mode"]
-            #self.debug_print(f"RPC reported mode: {self.current_mode_id()}")
+#            self.debug_print(f"RPC reported mode: {self.current_mode_id()}")
         else:
             title = ui.active_window().title
             mode = None
+            self.debug_print(f"nvrpc NOT OK")
             if "MODE:" in title:
                 mode = title.split("MODE:")[1].split(" ")[0]
                 self.debug_print(f"Window title reported mode: {mode}")
