@@ -9,7 +9,7 @@ extension_lang_map = {
     ".bat": "batch",
     ".c": "c",
     ".cmake": "cmake",
-    ".cpp": "cplusplus",
+    ".cc": "c",
     ".cs": "csharp",
     ".gdb": "gdb",
     ".go": "go",
