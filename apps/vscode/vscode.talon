@@ -54,6 +54,7 @@ file hunt [<user.text>]:
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)
     insert(text or "")
+file save all: user.vscode("workbench.action.files.saveAll")
 file copy path: user.vscode("copyFilePath")
 file create sibling: user.vscode_and_wait("explorer.newFile")
 file create: user.vscode("workbench.action.files.newUntitledFile")
