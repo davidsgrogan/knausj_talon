@@ -2,6 +2,8 @@ tag: terminal
 and tag: user.git
 -
 git mb: "git map-branches\n"
+git upstream (deaf | diff): "git upstream-diff "
+git see el upload: "git-cl upload"
 
 # Standard commands
 git add patch: "git add . -p\n"
@@ -43,6 +45,7 @@ git log all: "git log\n"
 git log all changes: "git log -c\n"
 git log: "git log "
 git log changes: "git log -c "
+git log stat: "git log --stat "
 git merge: "git merge "
 git merge <user.text>:"git merge {text}"
 git move: "git mv "
@@ -76,6 +79,7 @@ git remote add upstream: "git remote add upstream "
 git remote remove: "git remote remove "
 git remote show origin: "git remote show origin\n"
 git show: "git show "
+git show stat: "git show --stat "
 git stash pop: "git stash pop\n"
 git stash: "git stash\n"
 git stash apply: "git stash apply\n"

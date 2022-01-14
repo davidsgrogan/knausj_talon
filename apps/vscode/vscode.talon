@@ -88,6 +88,12 @@ whitespace trim: user.vscode("editor.action.trimTrailingWhitespace")
 language switch: user.vscode("workbench.action.editor.changeLanguageMode")
 refactor rename: user.vscode("editor.action.rename")
 refactor this: user.vscode("editor.action.refactor")
+ref next:
+  user.vscode("references-view.tree.focus")
+  key(down enter)
+ref last:
+  user.vscode("references-view.tree.focus")
+  key(up enter)
 
 #code navigation
 (go declaration | follow): user.vscode("editor.action.revealDefinition")

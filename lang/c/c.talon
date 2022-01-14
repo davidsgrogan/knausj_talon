@@ -27,9 +27,6 @@ settings():
     user.code_private_variable_formatter = "SNAKE_CASE"
     user.code_protected_variable_formatter = "SNAKE_CASE"
     user.code_public_variable_formatter = "SNAKE_CASE"
-    # whether or not to use uint_8 style datatypes
-    #    user.use_stdint_datatypes = 1
-
 
 
 ^funky <user.text>$: user.code_default_function(text)
@@ -37,34 +34,8 @@ settings():
 
 # NOTE: migrated from generic, as they were only used here, though once cpp support is added, perhaps these should be migrated to a tag together with the commands below
 state include:
-    insert('#include ')
-state include system:
-    insert('#include <>')
-    edit.left()
-state include local:
     insert('#include ""')
     edit.left()
-state type deaf:
-    insert('typedef ')
-state type deaf struct:
-    insert('typedef struct')
-    insert('{\n\n}')
-    edit.up()
-    key('tab')
-
-
-# XXX - create a preprocessor tag for these, as they will match cpp, etc
-state define: "#define "
-state undefine: "#undef "
-state if define: "#ifdef "
-
-# XXX - preprocessor instead of pre?
-state pre if: "#if "
-state error: "#error "
-state pre else if: "#elif "
-state pre end: "#endif "
-state pragma: "#pragma "
-state default: "default:\nbreak;"
 
 #control flow
 #best used with a push like command
