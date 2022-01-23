@@ -2,9 +2,9 @@ tag: terminal
 -
 # tags should be activated for each specific terminal in the respective talon file
 
-lisa: 
+lisa:
     user.terminal_list_directories()
-lisa all: 
+lisa all:
     user.terminal_list_all_directories()
 katie [<user.text>]: user.terminal_change_directory(text or "")
 katie root: user.terminal_change_directory_root()
@@ -23,7 +23,8 @@ later <user.text>: "ll -tr {text}"
 later: "ll -tr "
 
 # https://github.com/AndreasArvidsson/andreas-talon/tree/master/apps/terminal
-history grep:                  "history | grep "
+history grep:                  "ctrl "
+find grep:                     "find . | grep "
 make dir:                      "mkdir "
 move:                          "mv "
 remove:                        "rm "
@@ -38,7 +39,7 @@ sim link:                      "ln -s "
 #el dap: "dgrogan"
 talon (dir | dear): "cd $HOME/.talon/user/knausj_talon\n"
 secure copy: "scp "
-secure shell: "ssh "
+secure shell: "ssh dgrogan.sfo.corp.google.com"
 credentials: "gcert\n"
 goma start: "goma ensure_start\n"
 goma stop: "goma stop\n"
@@ -55,6 +56,36 @@ push (dir | dear):
 pop (dir | dear):
   "popd"
   key("enter")
+
+# gdb rr stuff that should go into its own tag
+# once you do one of these to set the title
+# https://askubuntu.com/q/636944/86397
+# https://superuser.com/q/84710/155324
+# https://stackoverflow.com/q/1687642/681070
+(step | into): "s\n"
+next: "next\n"
+(are | reverse) next: "rn\n"
+breakpoints: "info b\n"
+break: "b "
+temp break: "tb "
+break <number>: "b {number}\n"
+temp break <number>: "tb {number}\n"
+disable <number>: "disable {number}\n"
+delete <number>: "delete {number}"
+until <number>: "until {number}"
+(are see | reverse continue): "rc\n"
+continue: "c\n"
+(fin[ish] | return): "finish\n"
+reverse (fin | finish): "reverse-fin\n"
+cross: key(ctrl-x o)
+off: key(ctrl-x a)
+print: "p "
+(back | stack) trace: "bt\n"
+(back | stack) trace <number>: "bt {number}\n"
+frame: "f "
+frame <number>: "f {number}\n"
+(down | inner): "down\n"
+(up | outer): "up\n"
 
 
 # need to make this in bash only, not vim

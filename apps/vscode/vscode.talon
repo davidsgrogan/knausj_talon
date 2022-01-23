@@ -109,6 +109,7 @@ go recent [<user.text>]:
     sleep(250ms)
 go header: user.vscode("clangd.switchheadersource")
 match: user.vscode("editor.action.jumpToBracket")
+outward: user.vscode("editor.emmet.action.balanceOut")
 
 # Bookmarks. Requires Bookmarks plugin
 go marks: user.vscode("workbench.view.extension.bookmarks")
