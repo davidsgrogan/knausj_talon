@@ -236,6 +236,7 @@ alternate_keys = {
     "for delete": "delete",
     "for deet": "delete",
     "for deep": "delete",
+    "four deep": "delete",
 #    "forward delete": "delete",
     #'junk': 'backspace',
     "page up": "pageup",
