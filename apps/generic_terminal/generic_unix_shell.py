@@ -14,7 +14,7 @@ class Actions:
         """Lists directories"""
         actions.insert("ls")
         actions.key("enter")
-        
+
     def terminal_list_all_directories():
         """Lists all directories including hidden"""
         actions.insert("ls -a")
@@ -33,8 +33,8 @@ class Actions:
 
     def terminal_clear_screen():
         """Clear screen"""
-        actions.insert("clear")
-        actions.key("enter")
+        # actions.insert("clear")
+        actions.key("ctrl-l")
 
     def terminal_run_last():
         """Repeats the last command"""
@@ -51,5 +51,8 @@ class Actions:
 #        actions.insert("y")
 #        actions.key("enter")
 
-    def terminal_vim():
-        actions.insert("vim ")
+    def terminal_vim(path: str):
+      actions.insert("vim {}".format(path))
+        # if path:
+        #     actions.key("enter")
+        # actions.insert("vim ")

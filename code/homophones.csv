@@ -236,7 +236,7 @@ flyer,flier
 fold,foaled
 for,four,fore
 foregone,forgone
-forward,foreword
+forward,foreword,ford
 fort,forte
 fourth,forth
 foul,fowl
@@ -588,6 +588,7 @@ torturous,tortuous
 towed,toad,toed
 tracked,tract
 trader,traitor
+tries,trees
 troop,troupe
 trust,trussed
 turbine,turban
@@ -616,8 +617,7 @@ wave,waive
 wax,whacks
 way,weigh,whey
 we,wee
-where,wear,ware
-were,whir,we're
+where,wear,ware,were,we're
 whether,weather,wether
 we'd,weed
 week,weak

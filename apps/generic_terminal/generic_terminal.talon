@@ -13,12 +13,9 @@ run last: user.terminal_run_last()
 rerun [<user.text>]: user.terminal_rerun_search(text or "")
 rerun search: user.terminal_rerun_search("")
 kill all: user.terminal_kill_all()
-veal: user.terminal_vim()
-#vim: actions.insert("vim ")
+veal [<user.text>]: user.terminal_vim(text or "")
 print dir:                     "pwd\n"
 grep:                          "grep "
-#low: "ll "
-#low <user.text>: "ll {text}"
 later <user.text>: "ll -tr {text}"
 later: "ll -tr "
 
@@ -44,6 +41,7 @@ credentials: "gcert\n"
 goma start: "goma ensure_start\n"
 goma stop: "goma stop\n"
 red green blue: "rgb "
+red green blue <user.text>: "rgb {text}"
 release goma: "rgb "
 
 home (dir | dear): "cd\n"

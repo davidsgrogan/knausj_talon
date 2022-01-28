@@ -8,7 +8,7 @@ class Actions:
 
     def terminal_list_directories():
         """Lists directories"""
-        
+
     def terminal_list_all_directories():
         """Lists all directories including hidden"""
 
@@ -29,5 +29,5 @@ class Actions:
 
     def terminal_kill_all():
         """kills the running command"""
-    def terminal_vim():
-        """some stuff""" 
+    def terminal_vim(path: str):
+        """some stuff"""

@@ -212,7 +212,10 @@ curse undo: user.vscode("cursorUndo")
 
 select word: user.vscode("editor.action.addSelectionToNextFindMatch")
 skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
+
 cross: user.vscode("workbench.action.focusNextGroup")
+move last: user.vscode("workbench.action.moveEditorToPreviousGroup")
+move next: user.vscode("workbench.action.moveEditorToNextGroup")
 
 # jupyter
 cell next: user.vscode("jupyter.gotoNextCellInFile")
