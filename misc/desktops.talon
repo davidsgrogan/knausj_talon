@@ -1,4 +1,4 @@
-desk <number_small>: user.desktop(number_small)
+(ski | desk) <number_small>: user.desktop(number_small)
 desk right: user.desktop(2)
 desk next: user.desktop_next()
 desk left: user.desktop(1)
