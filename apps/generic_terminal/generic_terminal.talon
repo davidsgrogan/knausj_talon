@@ -16,6 +16,7 @@ kill all: user.terminal_kill_all()
 veal [<user.text>]: user.terminal_vim(text or "")
 print dir:                     "pwd\n"
 grep:                          "grep "
+grep <user.text>:              "grep {text}"
 later <user.text>: "ll -tr {text}"
 later: "ll -tr "
 
@@ -42,7 +43,7 @@ goma start: "goma ensure_start\n"
 goma stop: "goma stop\n"
 red green blue: "rgb "
 red green blue <user.text>: "rgb {text}"
-release goma: "rgb "
+#release goma: "rgb "
 
 home (dir | dear): "cd\n"
 go back: "cd -\n"
@@ -84,6 +85,7 @@ frame: "f "
 frame <number>: "f {number}\n"
 (down | inner): "down\n"
 (up | outer): "up\n"
+watch: "watch -l "
 
 
 # need to make this in bash only, not vim

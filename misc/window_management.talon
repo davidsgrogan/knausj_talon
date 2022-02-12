@@ -19,3 +19,8 @@ snap <user.running_applications> [screen] <number>:
 
 coder:
   user.switcher_focus("Code")
+
+(term|terminal):
+  user.switcher_focus("term")
+chrome:
+  user.switcher_focus("chrome")
