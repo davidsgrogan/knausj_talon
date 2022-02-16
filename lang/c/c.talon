@@ -63,4 +63,4 @@ push brackets:
 # Ex. (int *)
 cast to <user.c_cast>: "{c_cast}"
 standard cast to <user.stdint_cast>: "{stdint_cast}"
-<user.c_types>: "{c_types}"
+<user.c_types>: "{c_types} "

@@ -36,8 +36,13 @@ ctx.lists["self.c_types"] = {
 ctx.lists["user.code_functions"] = {
 }
 
+mod.list("c_keywords", desc="C keywords")
 mod.list("c_types", desc="Common C types")
 
+@mod.capture(rule="{self.c_keywords}")
+def c_keywords(m) -> str:
+    "Returns a string"
+    return m.c_keywords
 
 @mod.capture(rule="{self.c_types}")
 def c_types(m) -> str:
