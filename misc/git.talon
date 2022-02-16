@@ -3,7 +3,12 @@ and tag: user.git
 -
 git mb: "git map-branches\n"
 git upstream (deaf | diff): "git upstream-diff "
-git seal upload: "git-cl upload "
+git seal upload:
+  "git-cl upload -t \"\""
+  key("left")
+git seal upload that:
+  "git-cl upload -t "
+  key("esc .")
 git seal desk: "git-cl desc\n"
 
 # Standard commands
@@ -80,6 +85,7 @@ git remote add: "git remote add "
 git remote add upstream: "git remote add upstream "
 git remote remove: "git remote remove "
 git remote show origin: "git remote show origin\n"
+git revert no edit: "git revert --no-edit "
 git show: "git show "
 git show stat: "git show --stat "
 git stash pop: "git stash pop\n"

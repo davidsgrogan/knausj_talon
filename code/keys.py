@@ -139,7 +139,7 @@ punctuation_words = {
     "full stop": ".",
     "semicolon": ";",
     "semi": ";",
-    "colon": ":",
+    "stack": ":",
     "forward slash": "/",
     "question mark": "?",
     "exclamation mark": "!",
