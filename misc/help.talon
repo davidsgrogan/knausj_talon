@@ -16,3 +16,5 @@ help help: user.help_search("help")
 # https://github.com/AndreasArvidsson/andreas-talon/blob/master/misc/help/help_active_context.py
 # more at https://github.com/AndreasArvidsson/andreas-talon/tree/master/misc/talon_helpers
 ^help active context$:                 user.help_active_context_toggle()
+
+help scope$: user.help_scope_toggle()
