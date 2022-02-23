@@ -98,8 +98,8 @@ class UserActions:
     def code_insert_is_null():                                  actions.auto_insert(' == NULL ')
     def code_insert_is_not_null():                              actions.auto_insert(' != NULL')
     def code_state_if():
-        actions.insert('if () {\n}\n')
-        actions.key('up:2 left:3')
+        actions.insert('if () {\n')
+        actions.key('up:1 right:2')
     def code_state_else_if():
         actions.insert('else if () {\n}\n')
         actions.key('up:2 left:3')

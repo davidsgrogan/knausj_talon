@@ -3,7 +3,7 @@ from typing import Set
 from talon import Module, Context, actions, app
 import sys
 
-default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust harp ink jury crunch look made near odd pit quench red sit trap urge vest whale plex yank zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -264,4 +264,3 @@ class Actions:
                 getattr(actions.edit, d)()
             else:
                 raise RuntimeError(f'invalid arrow key: {d}')
-
