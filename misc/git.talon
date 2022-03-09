@@ -3,6 +3,7 @@ and tag: user.git
 -
 git mb: "git map-branches\n"
 git upstream (deaf | diff): "git upstream-diff "
+git upstream (deaf | diff) stat: "git upstream-diff --stat\n"
 git seal upload:
   "git-cl upload -t \"\""
   key("left")
@@ -10,6 +11,7 @@ git seal upload that:
   "git-cl upload -t "
   key("esc .")
 git seal desk: "git-cl desc\n"
+git squash branch: "git squash-branch"
 
 # Standard commands
 git add patch: "git add . -p\n"
