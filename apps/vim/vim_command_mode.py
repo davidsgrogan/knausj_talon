@@ -24,8 +24,8 @@ class EditActions:
     def delete_line():
         actions.key("ctrl-u")
 
-    def paste():
-        actions.key("ctrl-shift-v")
+#    def paste():
+#        actions.key("super-v")
 
 
 @ctx.action_class("user")
