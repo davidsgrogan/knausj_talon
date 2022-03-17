@@ -29,9 +29,9 @@ settings():
 ^static funky <user.text>$: user.code_private_static_function(text)
 
 # NOTE: migrated from generic, as they were only used here, though once cpp support is added, perhaps these should be migrated to a tag together with the commands below
-state include:
-    insert('#include ""')
-    edit.left()
+#state include:
+#    insert('#include ""')
+#    edit.left()
 
 #control flow
 #best used with a push like command
@@ -57,6 +57,6 @@ push brackets:
     insert("{c_variable} {letter} ")
 
 # Ex. (int *)
-cast to <user.c_cast>: "{c_cast}"
-standard cast to <user.stdint_cast>: "{stdint_cast}"
+#cast to <user.c_cast>: "{c_cast}"
+#standard cast to <user.stdint_cast>: "{stdint_cast}"
 <user.c_types>: "{c_types} "
