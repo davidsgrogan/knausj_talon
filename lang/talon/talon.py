@@ -30,7 +30,7 @@ mod.list("talon_modes")
 ctx.matches = r"""
 tag: user.talon
 """
-ctx.lists["user.code_functions"] = {
+ctx.lists["user.code_common_function"] = {
     "insert": "insert",
     "key": "key",
     "print": "print",
@@ -97,6 +97,6 @@ class UserActions:
         actions.auto_insert("#")
 
     def code_insert_function(text: str, selection: str):
-        text += f"({selection or ''}"
+        text += f"({selection or ''})"
         actions.user.paste(text)
         actions.edit.left()

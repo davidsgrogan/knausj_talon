@@ -31,7 +31,7 @@ ctx.lists["self.c_types"] = {
     "float": "float",
 }
 
-ctx.lists["user.code_functions"] = {
+ctx.lists["user.code_common_function"] = {
 }
 
 mod.list("c_keywords", desc="C keywords")
