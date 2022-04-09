@@ -15,5 +15,7 @@ mode: all
     user.engine_sleep()
 ^(snows | snooze)$: speech.disable()
 ^talon sleep [<phrase>]$: speech.disable()
-^talon wake$: speech.enable()
+holy moley thats a big one$: speech.enable()
 
+key(ctrl-0):
+  speech.toggle()

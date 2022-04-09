@@ -13,6 +13,7 @@ git seal upload that:
   key("esc .")
 git seal desk: "git-cl desc\n"
 git squash branch: "git squash-branch"
+git track branch: "git tb "
 
 # Standard commands
 git add patch: "git add . -p\n"
