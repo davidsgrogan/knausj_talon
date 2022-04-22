@@ -22,7 +22,7 @@ later <user.text>: "ll -tr {text}"
 later: "ll -tr "
 
 # https://github.com/AndreasArvidsson/andreas-talon/tree/master/apps/terminal
-history grep:                  "ctrl "
+history grep [<user.text>]:    "ctrl {text or ''} "
 find grep:                     "find . | grep "
 make dir:                      "mkdir "
 move:                          "mv "
