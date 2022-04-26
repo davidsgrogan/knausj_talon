@@ -224,6 +224,17 @@ class Actions:
         """Stops scrolling"""
         stop_scroll()
 
+    def smooth_wheel_scroll(direction: str):
+        """Scrolls small amount smoothly"""
+        pixels = 15
+        if direction == "up":
+          pixels *= -1
+        elif direction != "down":
+          print(f"treating {direction} as 'down'")
+        for i in range(20):
+          actions.mouse_scroll(pixels)
+          actions.sleep("8ms")
+
     def mouse_gaze_scroll():
         """Starts gaze scroll"""
         global continuous_scoll_mode
