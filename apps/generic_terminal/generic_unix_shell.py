@@ -24,6 +24,7 @@ class Actions:
         """Lists change directory"""
         actions.insert("cd {}".format(path))
         if path:
+            actions.key("tab")
             actions.key("enter")
 
     def terminal_change_directory_root():
