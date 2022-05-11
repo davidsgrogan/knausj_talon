@@ -48,7 +48,6 @@ def c_types(m) -> str:
     return m.c_types
 
 
-@mod.capture(rule="<self.c_types>[<self.c_pointers>]")
 def c_variable(m) -> str:
     "Returns a string"
     return " ".join(list(m))
