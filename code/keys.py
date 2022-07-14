@@ -156,6 +156,7 @@ symbol_key_words = {
     "dot": ".",
     "point": ".",
     "quote": "'",
+    "question": "?",
     "apostrophe": "'",
     "L square": "[",
     "left square": "[",
@@ -226,7 +227,9 @@ simple_keys = [
 ]
 
 alternate_keys = {
+    "wipe": "backspace",
     "delete": "backspace",
+    #'junk': 'backspace',
     "deep": "backspace",
     "deet": "backspace",
     "for delete": "delete",
@@ -234,7 +237,6 @@ alternate_keys = {
     "for deep": "delete",
     "four deep": "delete",
 #    "forward delete": "delete",
-    #'junk': 'backspace',
     "page up": "pageup",
     "page down": "pagedown",
 }
