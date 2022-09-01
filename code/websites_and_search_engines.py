@@ -1,4 +1,5 @@
 import webbrowser
+import pathlib
 from urllib.parse import quote_plus
 
 from talon import Context, Module
@@ -61,4 +62,8 @@ class Actions:
     def search_with_search_engine(search_template: str, search_text: str):
         """Search a search engine for given text"""
         url = search_template.replace("%s", quote_plus(search_text))
+        webbrowser.open(url)
+    def openDirectory(file: str):
+        "Have Finder open a directory"
+        url = pathlib.Path(file).as_uri()
         webbrowser.open(url)
