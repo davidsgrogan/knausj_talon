@@ -48,8 +48,7 @@ push brackets:
     insert("{c_variable} ")
     insert(user.formatted_text(phrase, "PRIVATE_CAMEL_CASE,NO_SPACES"))
 
-<user.c_variable> <user.letter>:
-    insert("{c_variable} {letter} ")
+<user.c_variable> <user.letter>: insert("{c_variable} {letter} ")
 
 # Ex. (int *)
 #cast to <user.c_cast>: "{c_cast}"
