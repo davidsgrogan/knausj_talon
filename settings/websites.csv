@@ -1,11 +1,10 @@
 URL,Spoken name
 https://www.amazon.com/,amazon
 https://www.google.com/,google
-https://calendar.google.com,google calendar
+https://calendar.google.com,calendar
 https://maps.google.com/,maps
 https://mail.google.com/,gmail
 https://github.com/,github
-https://en.wikipedia.org/,wikipedia
 https://www.youtube.com/,youtube
 https://source.chromium.org/,source
 https://chromium-review.googlesource.com/dashboard/self,code
@@ -14,3 +13,4 @@ https://docs.google.com,docs
 https://doc.new,new dock
 http://www/,moma
 https://talon.wiki/,talon wiki
+https://drive.google.com/corp/drive/u/0/my-drive,drive
