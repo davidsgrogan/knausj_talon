@@ -63,6 +63,8 @@ sage:
 file save as:
     key(escape)
     user.vim_command_mode(":w ")
+fuck no:
+   user.vim_command_mode(":cq\n")
 # XXX - This should be vim_command_mode, but there's a bug in at lest
 # vim-fugitive commit where you lose the commit text if called from INSERT
 # mode, due to an unmodifiable buffer error

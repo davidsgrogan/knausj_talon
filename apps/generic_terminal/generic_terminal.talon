@@ -69,7 +69,6 @@ pop (dir | dear):
 # temp break [<number>]: "tb {number or ''}"
 # history grep [<user.text>]:    "ctrl {text or ''}"
 # break <number>: "b {number}\n"
-# #temp break <number>: "tb {number}\n"
 # disable <number>: "disable {number}\n"
 # delete <number>: "delete {number}"
 # until <number>: "until {number}"
