@@ -2,7 +2,6 @@ talon check updates: menu.check_for_updates()
 talon open log: menu.open_log()
 talon open rebel: menu.open_repl()
 talon home: menu.open_talon_home()
-recordings: user.file_manager_open_directory("/Users/dgrogan/.talon/recordings")
 talon copy context pie: user.talon_add_context_clipboard_python()
 talon copy context: user.talon_add_context_clipboard()
 talon copy name:

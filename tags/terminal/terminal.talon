@@ -48,13 +48,13 @@ red green blue <user.text>: "rgb {text}"
 home (dir | dear): "cd\n"
 go back: "cd -\n"
 up (dir | dear) (dir | dear): "cd ../..\n"
-up (dir | dear)$: "cd ..\n"
-push (dir | dear):
-  "pushd ."
-  key("enter")
-pop (dir | dear):
-  "popd"
-  key("enter")
+up (deer | dear): "cd ..\n"
+#push (dir | dear):
+#  "pushd ."
+#  key("enter")
+#pop (dir | dear):
+#  "popd"
+#  key("enter")
 
 # gdb rr stuff that should go into its own tag
 # once you do one of these to set the title
