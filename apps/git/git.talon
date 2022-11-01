@@ -122,8 +122,6 @@ git submodule add: "git submodule add "
 git tag: "git tag "
 
 # Convenience
-git edit config: "git config --local -e\n"
-
 git clone clipboard:
     insert("git clone ")
     edit.paste()
