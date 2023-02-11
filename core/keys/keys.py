@@ -169,6 +169,11 @@ punctuation_words = {
     # Currencies
     "dollar sign": "$",
 #    "pound sign": "£",
+    "hyphen": "-",
+    "L paren": "(",
+    "left paren": "(",
+    "R paren": ")",
+    "right paren": ")",
 }
 symbol_key_words = {
     "dot": ".",
@@ -192,10 +197,6 @@ symbol_key_words = {
     "down score": "_",
     "underscore": "_",
     "paren": "(",
-    "L paren": "(",
-    "left paren": "(",
-    "R paren": ")",
-    "right paren": ")",
     "brack": "{",
     "left brack": "{",
     "R brack": "}",
