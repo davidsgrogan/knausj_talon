@@ -6,3 +6,4 @@ open {user.website}: user.open_url(website)
     user.search_with_search_engine(search_engine, text)
 
 recordings: user.openDirectory('/Users/dgrogan/.talon/recordings')
+plex (downloads | download | sync | directory): user.openDirectory('/Users/dgrogan/Library/Application Support/Plex/Plex Media Server/Sync')

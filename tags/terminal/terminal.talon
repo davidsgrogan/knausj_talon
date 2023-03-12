@@ -21,6 +21,8 @@ grep <user.text>:              "grep {text}"
 later <user.text>: "ll -tr {text}"
 later: "ll -tr "
 pe sacks: "ps ax"
+sudo apt install: "sudo apt install "
+
 
 # https://github.com/AndreasArvidsson/andreas-talon/tree/master/apps/terminal
 history grep [<user.text>]:    "ctrl {text or ''}"
@@ -46,6 +48,12 @@ goma start: "goma ensure_start\n"
 goma stop: "goma stop\n"
 red green blue: "rgb "
 red green blue <user.text>: "rgb {text}"
+
+connect to work: "connect_to_work\n"
+talon log: "title talon log && ~/.talon/bin/tail_log\n"
+big rebase: "big_rebase_func\n"
+start (xpra | extra): "start_xpra\n"
+reload [dot] bash R C: ". ~/.bashrc\n"
 
 home (dir | dear): "cd\n"
 go back: "cd -\n"

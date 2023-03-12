@@ -11,6 +11,9 @@ window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
 #multiple_cursor.py support end
 
+# pokey's ("follow crunch" or whatever)
+# https://github.com/pokey/pokey_talon/blob/main/apps/vscode/vscode.talon
+
 please [<user.text>]:
     user.vscode("workbench.action.showCommands")
     insert(user.text or "")
@@ -209,19 +212,19 @@ change last: key(shift-alt-f5)
 change preview: user.vscode("editor.action.dirtydiff.next")
 
 # Testing
-test run: user.vscode("testing.runAtCursor")
-test run file: user.vscode("testing.runCurrentFile")
-test run all: user.vscode("testing.runAll")
-test run failed: user.vscode("testing.reRunFailTests")
-test run last: user.vscode("testing.reRunLastRun")
+# test run: user.vscode("testing.runAtCursor")
+# test run file: user.vscode("testing.runCurrentFile")
+# test run all: user.vscode("testing.runAll")
+# test run failed: user.vscode("testing.reRunFailTests")
+# test run last: user.vscode("testing.reRunLastRun")
 
-test debug: user.vscode("testing.debugAtCursor")
-test debug file: user.vscode("testing.debugCurrentFile")
-test debug all: user.vscode("testing.debugAll")
-test debug failed: user.vscode("testing.debugFailTests")
-test debug last: user.vscode("testing.debugLastRun")
+# test debug: user.vscode("testing.debugAtCursor")
+# test debug file: user.vscode("testing.debugCurrentFile")
+# test debug all: user.vscode("testing.debugAll")
+# test debug failed: user.vscode("testing.debugFailTests")
+# test debug last: user.vscode("testing.debugLastRun")
 
-test cancel: user.vscode("testing.cancelRun")
+# test cancel: user.vscode("testing.cancelRun")
 
 # Debugging
 break point: user.vscode("editor.debug.action.toggleBreakpoint")
@@ -237,17 +240,17 @@ debug console: user.vscode("workbench.debug.action.toggleRepl")
 debug clean: user.vscode("workbench.debug.panel.action.clearReplAction")
 
 # Terminal
-terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
-terminal new: user.vscode("workbench.action.terminal.new")
-terminal next: user.vscode("workbench.action.terminal.focusNext")
-terminal last: user.vscode("workbench.action.terminal.focusPrevious")
-terminal split: user.vscode("workbench.action.terminal.split")
-terminal zoom: user.vscode("workbench.action.toggleMaximizedPanel")
-terminal trash: user.vscode("workbench.action.terminal.kill")
-terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
-terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
-terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
-terminal <number_small>: user.vscode_terminal(number_small)
+# terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
+# terminal new: user.vscode("workbench.action.terminal.new")
+# terminal next: user.vscode("workbench.action.terminal.focusNext")
+# terminal last: user.vscode("workbench.action.terminal.focusPrevious")
+# terminal split: user.vscode("workbench.action.terminal.split")
+# terminal zoom: user.vscode("workbench.action.toggleMaximizedPanel")
+# terminal trash: user.vscode("workbench.action.terminal.kill")
+# terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
+# terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
+# terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
+# terminal <number_small>: user.vscode_terminal(number_small)
 
 #TODO: should this be added to linecommands?
 copy line down: user.vscode("editor.action.copyLinesDownAction")
@@ -257,7 +260,7 @@ copy line up: user.vscode("editor.action.copyLinesUpAction")
 select less: user.vscode("editor.action.smartSelect.shrink")
 select (more | this): user.vscode("editor.action.smartSelect.expand")
 
-minimap: user.vscode("editor.action.toggleMinimap")
+# minimap: user.vscode("editor.action.toggleMinimap")
 maximize: user.vscode("workbench.action.minimizeOtherEditors")
 restore: user.vscode("workbench.action.evenEditorWidths")
 
@@ -292,3 +295,6 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+
+search next: user.vscode("search.action.focusNextSearchResult")
+search last: user.vscode("search.action.focusPreviousSearchResult")

@@ -9,3 +9,5 @@ tag(): user.git
 #tag(): user.kubectl
 tag(): user.tabs
 tag(): user.readline
+
+T mux tab [new]: key(ctrl-shift-super-t)

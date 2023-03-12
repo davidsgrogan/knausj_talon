@@ -38,7 +38,7 @@ percent that:
 quote that:
     text = edit.selected_text()
     user.paste("'{text}'")
-(double quote | dub quote) that:
+(dub | dot) quote that:
     text = edit.selected_text()
     user.paste('"{text}"')
 (grave | back tick) that:
