@@ -80,6 +80,7 @@ abbreviations = {
     "direction": "dir",
     "directory": "dir",
     "distribution": "dist",
+    "doctor": "Dr.",
     "document": "doc",
     "documents": "docs",
     "double": "dbl",

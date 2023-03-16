@@ -10,4 +10,4 @@ tag(): user.git
 tag(): user.tabs
 tag(): user.readline
 
-T mux tab [new]: key(ctrl-shift-super-t)
+[new] T mux tab [new]: key(ctrl-shift-super-t)

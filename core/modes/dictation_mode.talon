@@ -13,6 +13,11 @@ cap: user.dictation_format_cap()
 ^(no cap | no-caps) that$: user.dictation_reformat_no_cap()
 ^(no space | no-space) that$: user.dictation_reformat_no_space()
 
+# dgrogan stuff
+^go down$: edit.down()
+^slap$: edit.line_insert_down()
+^enter$: key(enter)
+
 # Navigation
 go up <number_small> (line | lines):
     edit.up()

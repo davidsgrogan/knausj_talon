@@ -146,6 +146,7 @@ punctuation_words = {
     "`": "`",
     ",": ",",  # <== these things
     "back tick": "`",
+    "spamma": ", ",
     "comma": ",",
     # Workaround for issue with conformer b-series; see #946
     "coma": ",",
