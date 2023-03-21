@@ -193,7 +193,7 @@ class Actions:
           pixels *= -1
         elif direction != "down":
           print(f"treating {direction} as 'down'")
-        for i in range(60):
+        for i in range(50):
           actions.mouse_scroll(pixels)
           actions.sleep("5ms")
 

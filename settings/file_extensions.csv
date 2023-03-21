@@ -5,16 +5,12 @@ File extension,Name
 .sh,dot shell
 .vim,dot vim
 .c,dot see
-.cc,dot see see
+.cc,dot C C
+.html,dot H T M L
 .cs,dot see sharp
 .com,dot com
 .net,dot net
 .org,dot org
-.us,dot us
-.us,dot U S
-.exe,dot exe
-.bin,dot bin
-.bin,dot bend
 .json,dot jason
 .json,dot jay son
 .js,dot J S
