@@ -8,6 +8,7 @@ ellipses: "..."
 spamma: ", "
 stacka: ": "
 dotta: ". "
+^pit dot$: key("pagedown")
 arrow: "->"
 dub arrow: "=>"
 empty dub string: user.insert_between('"', '"')

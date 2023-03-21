@@ -193,9 +193,9 @@ class Actions:
           pixels *= -1
         elif direction != "down":
           print(f"treating {direction} as 'down'")
-        for i in range(35):
+        for i in range(60):
           actions.mouse_scroll(pixels)
-          actions.sleep("8ms")
+          actions.sleep("5ms")
 
     def mouse_gaze_scroll():
         """Starts gaze scroll"""
