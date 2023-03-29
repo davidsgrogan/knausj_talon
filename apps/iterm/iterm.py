@@ -7,10 +7,25 @@ app: iterm2
 directories_to_remap = {}
 directories_to_exclude = {}
 
+# This is not the standard shortcuts. I use them with the kinesis.
+@ctx.action_class("app")
+class AppActions:
+    def tab_next():
+        actions.key("ctrl-pagedown")
 
+    def tab_previous():
+        actions.key("ctrl-pageup")
+
+# --- Implement actions ---
 @ctx.action_class("user")
 class user_actions:
-    pass
+    # user.tabs
+    def tab_jump(number):
+        if number <= 9:
+            actions.key(f"cmd-{number}")
+
+    def tab_final():
+        actions.key("cmd-9")
     # def file_manager_current_path():
     #     title = ui.active_window().title
 

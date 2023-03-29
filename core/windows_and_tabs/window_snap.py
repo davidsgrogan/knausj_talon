@@ -189,7 +189,8 @@ def _move_to_screen(
 
 def _snap_window_helper(window, pos):
     screen = window.screen.visible_rect
-
+#    print(f"old window.rect == {window.rect}")
+#    print(f"new pos.right == {pos.right}")
     _set_window_pos(
         window,
         x=screen.x + (screen.width * pos.left),
@@ -216,6 +217,13 @@ _snap_positions = {
     # '---'---'     '-------'
     "left": RelativeScreenPos(0, 0, 0.5, 1),
     "right": RelativeScreenPos(0.5, 0, 1, 1),
+    # vscode needs 2560-this magic number pixels to have two editors open at
+    # 80 columns wide each.
+    # In the repl: actions.user.get_running_app("code").active_window.rect
+    # It needs 2560-885=1675 px to accomodate the side bar ("bar switch").
+    # That's approximately "snap right two thirds."
+    "my left": RelativeScreenPos(0, 0, 1188/2560, 1),
+    "my right": RelativeScreenPos(1188/2560, 0, 1, 1),
     "top": RelativeScreenPos(0, 0, 1, 0.5),
     "bottom": RelativeScreenPos(0, 0.5, 1, 1),
     # Thirds

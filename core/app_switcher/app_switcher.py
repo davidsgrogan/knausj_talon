@@ -280,6 +280,7 @@ class Actions:
     def switcher_launch(path: str):
         """Launch a new application by path (all OSes), or AppUserModel_ID path on Windows"""
         if app.platform != "windows":
+            print(f"path={path}")
             ui.launch(path=path)
         else:
             is_valid_path = False

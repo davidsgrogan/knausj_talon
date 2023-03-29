@@ -51,6 +51,7 @@ red green blue <user.text>: "rgb {text}"
 
 connect to work: "connect_to_work\n"
 talon log: "title talon log && ~/.talon/bin/tail_log\n"
+talon commandline: "~/.talon/bin/repl\n"
 big rebase: "big_rebase_func\n"
 start (xpra | extra): "start_xpra\n"
 reload [dot] bash R C: ". ~/.bashrc\n"

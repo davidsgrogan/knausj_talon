@@ -8,6 +8,14 @@ ctx.matches = r"""
 tag: browser
 """
 
+mod.list(
+    "browsers",
+    "dogs",
+)
+ctx.lists["self.browsers"] = (
+    "firefox",
+    "chrome",
+    "safari",)
 
 def is_url(url):
     try:
