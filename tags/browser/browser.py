@@ -1,4 +1,5 @@
 from urllib.parse import urlparse
+import webbrowser
 
 from talon import Context, Module, actions, app
 
@@ -32,6 +33,15 @@ class Actions:
     def browser_open_address_in_new_tab():
         """Open the url in the address bar in a new tab"""
         actions.key("alt-enter")
+
+    def open_in(browsers: str):
+        """dogs"""
+        dogs = actions.browser.address()
+        # /Applications/Firefox.app
+        # /Applications/Safari\ Technology\ Preview.app
+        webbrowser.get('open -a /Applications/Google\\ Chrome\\ Canary.app %s').open("http://www.google.com", new = 2)
+        print(browsers, dogs)
+        pass
 
 
 @ctx.action_class("user")

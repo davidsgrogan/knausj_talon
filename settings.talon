@@ -10,7 +10,7 @@ settings():
     user.help_max_command_lines_per_page = 50
 
     # Set the max number of contexts display per page in help
-    user.help_max_contexts_per_page = 20
+    user.help_max_contexts_per_page = 25
 
     # The default amount used when scrolling continuously
     user.mouse_continuous_scroll_amount = 80
@@ -48,7 +48,7 @@ settings():
 
     # Uncomment the below to insert text longer than 10 characters (customizable) by
     # pasting from the clipboard. This is often faster than typing.
-    #user.paste_to_insert_threshold = 10
+    # user.paste_to_insert_threshold = 10
 
     # Uncomment the below to enable context-sensitive dictation. This determines
     # how to format (capitalize, space) dictation-mode speech by selecting &

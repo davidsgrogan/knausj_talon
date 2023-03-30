@@ -31,4 +31,4 @@ show extensions: browser.show_extensions()
 show history: browser.show_history()
 show cache: browser.show_clear_cache()
 
-# open in <user.browsers>: browser.open_in(browsers)
+open in {user.browsers}: user.open_in(browsers)
