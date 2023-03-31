@@ -22,19 +22,22 @@ class UserActions:
 class BrowserActions:
     def address():
         try:
-            mac_app = ui.apps(bundle=actions.app.bundle())[0]
-            window = mac_app.windows()[0]
+            window = ui.active_app().windows()[0]
         except IndexError:
+            print("no windows, returning empty string")
             return ""
         try:
+            print("got a window, now down here")
             web_area = window.element.children.find_one(AXRole="AXWebArea")
+            print("got a web area")
             address = web_area.AXURL
         except (ui.UIErr, AttributeError):
+            print("caught an exception")
             try:
                 address = applescript.run(
                     """
                     tell application id "{bundle}"
-                        if not (exists (window 1)) then return ""
+                        if not (exists (window 1)) then return "horses"
                         return the URL of the active tab of the front window
                     end tell""".format(
                         bundle=actions.app.bundle()

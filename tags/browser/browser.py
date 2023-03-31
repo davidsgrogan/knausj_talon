@@ -1,7 +1,8 @@
 from urllib.parse import urlparse
 import webbrowser
+import subprocess
 
-from talon import Context, Module, actions, app
+from talon import Context, Module, actions, app, ui
 
 mod = Module()
 ctx = Context()
@@ -9,14 +10,16 @@ ctx.matches = r"""
 tag: browser
 """
 
-mod.list(
-    "browsers",
-    "dogs",
-)
-ctx.lists["self.browsers"] = (
-    "firefox",
-    "chrome",
-    "safari",)
+mod.list("browsers", "some description")
+ctx.lists["self.browsers"] = {
+    # Without -g, firefox does not open the new site if the browser is not
+    # already running.
+    "firefox": "/Applications/Firefox.app -g",
+    "chrome": "/Applications/Google\\ Chrome.app",
+    "canary": "/Applications/Google\\ Chrome\\ Canary.app",
+    "stable": "/Applications/Google\\ Chrome.app",
+    "safari": "/Applications/Safari\\ Technology\\ Preview.app", }
+
 
 def is_url(url):
     try:
@@ -27,6 +30,22 @@ def is_url(url):
     except ValueError:
         return False
 
+def get_the_address():
+    address = actions.browser.address()
+    if address == "":
+        # The above line does not work in firefox.
+        actions.browser.focus_address()
+        actions.sleep("180ms")
+        address = actions.edit.selected_text()
+    if address == "":
+        print("giving up")
+        raise Exception("couldn't find an address")
+    if not address.startswith("http"):
+        # Safari omits the scheme if it is not secure.
+        print(
+            f"got a URL with no scheme ({address}) from {ui.active_app().name}")
+        address = "http://" + address
+    return address
 
 @mod.action_class
 class Actions:
@@ -36,12 +55,15 @@ class Actions:
 
     def open_in(browsers: str):
         """dogs"""
-        dogs = actions.browser.address()
-        # /Applications/Firefox.app
-        # /Applications/Safari\ Technology\ Preview.app
-        webbrowser.get('open -a /Applications/Google\\ Chrome\\ Canary.app %s').open("http://www.google.com", new = 2)
-        print(browsers, dogs)
-        pass
+        address = get_the_address()
+        subprocess.run(f"/usr/bin/open -a {browsers} {address}", shell=True)
+
+        # https://stackoverflow.com/questions/48056052/webbrowser-get-could-not-locate-runnable-browser
+        # if open -a doesn't work well.
+        # webbrowser.get(f"open -a {browsers} %s").open(address, new=2)
+
+        # ui.launch("firefox", args=address)
+        # print(browsers, "address = ", address)
 
 
 @ctx.action_class("user")
