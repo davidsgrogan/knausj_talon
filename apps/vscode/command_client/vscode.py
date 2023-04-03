@@ -1,6 +1,7 @@
 from typing import Any
 
-from talon import Context, Module, actions
+from talon import Context, Module, actions, app
+import re
 
 from .command_client import NoFileServerException, NotSet, run_command
 
@@ -37,6 +38,28 @@ def command_server_or_client_fallback(command_id: str, wait: bool):
 class VsCodeAction:
     def command_server_directory() -> str:
         return "vscode-command-server"
+
+    def get_the_address():
+        # This next line assumes a full file name which I got because I changed
+        # # vscode's "window.title" setting to start with {activeEditorLong}. In
+        # Settings, search for "title", and change it there.
+        filename_from_vscode = actions.win.filename()
+        # print(f"filename_from_vscode = {filename_from_vscode}")
+        if re.search(pattern='\\.(cc|h|py)$', string=filename_from_vscode):
+            error_str = f"{filename_from_vscode} looks like code, so I'm not going to try to open it in a browser"
+            print(error_str)
+            # app.notify(error_str)
+            return None
+        urlified_string = re.sub(
+            '^.*c/1/src/(.+)',
+            r'https://b2620015c011a0202817f7e0a9105b3960050000000000000000001.proxy.googleprod.com/c/1/src/\1',
+            filename_from_vscode)
+        # When above string gets out of date, can just punt on it and always
+        # open in chrome from vscode with the below.
+        # r'http://dgrogan.sfo.corp.google.com/c/1/src/\1',
+        # filename_from_vscode)
+        # print(urlified_string)
+        return urlified_string
 
 
 @mod.action_class

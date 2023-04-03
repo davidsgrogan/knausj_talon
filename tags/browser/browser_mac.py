@@ -24,15 +24,15 @@ class BrowserActions:
         try:
             window = ui.active_app().windows()[0]
         except IndexError:
-            print("no windows, returning empty string")
+            # print("no windows, returning empty string")
             return ""
         try:
-            print("got a window, now down here")
+            # print("got a window, now down here")
             web_area = window.element.children.find_one(AXRole="AXWebArea")
-            print("got a web area")
+            # print("got a web area")
             address = web_area.AXURL
         except (ui.UIErr, AttributeError):
-            print("caught an exception")
+            # print("caught an exception")
             try:
                 address = applescript.run(
                     """
