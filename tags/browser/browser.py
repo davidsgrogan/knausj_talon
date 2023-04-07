@@ -26,6 +26,7 @@ def is_url(url):
         # Valid if url successfully parsed
         result = urlparse(url)
         # and contains both scheme (e.g. http) and netloc (e.g. github.com)
+        # print("netloc is", result.netloc)
         return all([result.scheme, result.netloc])
     except ValueError:
         return False
@@ -48,10 +49,14 @@ class Actions:
         if address == "":
             print("giving up")
             raise Exception("couldn't find an address")
-        if not address.startswith("http"):
-            # Safari omits the scheme if it is not secure.
+        # print("scheme is", urlparse(address).scheme)
+        # This check is not foolproof. "192.168.0.100:4567" doesn't work:
+        # urlparse says the scheme is "192.168.0.100", so the below does not add
+        # http:// even though it is necessary.
+        if urlparse(address).scheme == "":
+            # In Safari, actions.browser.address omits the scheme if it is http.
             print(
-                f"got a URL with no scheme ({address}) from {ui.active_app().name}")
+                f"got no-scheme ({address}) from {ui.active_app().name}")
             address = "http://" + address
         return address
 
