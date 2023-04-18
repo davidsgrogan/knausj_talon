@@ -5,9 +5,10 @@ git mb: "git map-branches\n"
 git rebase update: "git rebase-update -n "
 git upstream (deaf | diff): "git upstream-diff "
 git upstream (deaf | diff) stat: "git upstream-diff --stat\n"
-git seal upload:
+git seal upload [<user.text>]:
   "git-cl upload -t \"\""
   key("left")
+  "{text or ''}"
 git seal upload that:
   "git-cl upload -t "
   key("esc .")
@@ -33,7 +34,9 @@ git branch <user.text>: "git branch {text}"
 git checkout: "git checkout "
 git checkout master: "git checkout master\n"
 git checkout main: "git checkout main\n"
-git checkout <user.text>: "git checkout {text}"
+git checkout <user.text>:
+  "git checkout {text}"
+  key("tab")
 git cherry pick: "git cherry-pick "
 git cherry pick continue: "git cherry-pick --continue "
 git cherry pick abort: "git cherry-pick --abort "
