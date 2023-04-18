@@ -14,6 +14,7 @@ git seal upload that:
 git seal desk: "git-cl desc\n"
 git squash branch: "git squash-branch"
 git track branch: "git tb "
+git rename branch [<user.text>]: "git rename-branch {text or ''}"
 
 # dogs [<user.text>]:
 #   "dogs {text or ''}"
@@ -85,6 +86,7 @@ git rebase: "git rebase "
 git rebase continue: "git rebase --continue"
 git rebase interactive: "git rebase -i HEAD~"
 git rebase skip: "git rebase --skip"
+git rebase abort: "git rebase --abort"
 git remove: "git rm "
 git branch delete: "git branch -D "
 git (remove|delete) branch: "git branch -D "

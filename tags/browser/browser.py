@@ -77,6 +77,10 @@ class Actions:
         # ui.launch("firefox", args=address)
         # print(browsers, "address = ", address)
 
+    def view_source():
+        """dogs"""
+        pass
+
 
 @ctx.action_class("user")
 class UserActions:

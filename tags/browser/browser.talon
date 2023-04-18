@@ -22,13 +22,14 @@ bookmark bar [show]: browser.bookmarks_bar()
 downloads show: browser.show_downloads()
 extensions show: browser.show_extensions()
 history show: browser.show_history()
-cache show: browser.show_clear_cache()
+#cache show: browser.show_clear_cache()
 dev tools [show]: browser.toggle_dev_tools()
 
 # Legacy [verb noun] commands to be removed at a later time
 show downloads: browser.show_downloads()
 show extensions: browser.show_extensions()
 show history: browser.show_history()
-show cache: browser.show_clear_cache()
+#show cache: browser.show_clear_cache()
 
 open in {user.browsers}: user.open_in(browsers)
+view source: user.view_source()

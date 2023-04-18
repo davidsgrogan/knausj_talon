@@ -17,6 +17,9 @@ class UserActions:
     def tab_final():
         actions.key("cmd-9")
 
+    def view_source():
+        actions.key("cmd-alt-u")
+
 
 @ctx.action_class("browser")
 class BrowserActions:
