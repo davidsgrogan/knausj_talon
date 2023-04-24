@@ -299,4 +299,6 @@ preview markdown: user.vscode("markdown.showPreview")
 search next: user.vscode("search.action.focusNextSearchResult")
 search last: user.vscode("search.action.focusPreviousSearchResult")
 
+
 open in {user.browsers}: user.open_in(browsers)
+move file [to] flex directory: user.move_to_flex()

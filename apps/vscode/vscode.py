@@ -1,4 +1,6 @@
 from talon import Context, Module, actions, app
+import re
+import os
 
 is_mac = app.platform == "mac"
 
@@ -153,6 +155,10 @@ class Actions:
     def command_palette():
         """Show command palette"""
         actions.key("ctrl-shift-p")
+
+    def move_to_flex():
+        """dogs"""
+        pass
 
 
 @mac_ctx.action_class("user")
@@ -376,3 +382,31 @@ class UserActions:
         actions.edit.find(text)
         actions.sleep("100ms")
         actions.key("esc")
+
+    def get_the_address():
+        # This next line assumes a full file name which I got because I changed
+        # # vscode's "window.title" setting to start with {activeEditorLong}. In
+        # Settings, search for "title", and change it there.
+        filename_from_vscode = actions.win.filename()
+        # print(f"filename_from_vscode = {filename_from_vscode}")
+        if re.search(pattern='\\.(cc|h|py)$', string=filename_from_vscode):
+            error_str = f"{filename_from_vscode} looks like code, so I'm not going to try to open it in a browser"
+            print(error_str)
+            # app.notify(error_str)
+            return None
+        urlified_string = re.sub(
+            '^.*c/1/src/(.+)',
+            r'https://b2620015c011a0202817f7e0a9105b3960050000000000000000001.proxy.googleprod.com/c/1/src/\1',
+            filename_from_vscode)
+        # When above string gets out of date, can just punt on it and always
+        # open in chrome from vscode with the below.
+        # r'http://dgrogan.sfo.corp.google.com/c/1/src/\1',
+        # filename_from_vscode)
+        # print(urlified_string)
+        return urlified_string
+
+    def move_to_flex():
+        filename_from_vscode = actions.win.filename()
+        print(filename_from_vscode)
+        # match = re.search(r'(^.*c/1/src/).*([^][html|js|css]$)')
+        actions.user.vscode_with_plugin("andreas.renameFile", "puppies.txt")

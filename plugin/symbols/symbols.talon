@@ -1,6 +1,6 @@
 new line: "\n"
 double dash: "--"
-triple quote: "'''"
+triple quote: user.paste('"""')
 (triple grave | triple back tick | gravy): insert("```")
 (dot dot | dotdot): ".."
 ellipses: "..."
