@@ -11,3 +11,5 @@ tag(): user.tabs
 tag(): user.readline
 
 [new] T mux tab [new]: key(ctrl-shift-super-t)
+move tab left: key(super-j)
+move tab right: key(super-k)

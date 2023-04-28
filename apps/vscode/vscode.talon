@@ -67,6 +67,7 @@ zen switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
 file save all: user.vscode("workbench.action.files.saveAll")
+disk: user.vscode("workbench.action.files.saveAll")
 file hunt [<user.text>]:
     user.vscode("workbench.action.quickOpen")
     sleep(50ms)

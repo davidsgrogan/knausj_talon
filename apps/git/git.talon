@@ -9,13 +9,14 @@ git seal upload [<user.text>]:
   "git-cl upload -t \"\""
   key("left")
   "{text or ''}"
-git seal upload that:
+git seal upload (that | dot):
   "git-cl upload -t "
   key("esc .")
 git seal desk: "git-cl desc\n"
 git squash branch: "git squash-branch"
 git track branch: "git tb "
 git rename branch [<user.text>]: "git rename-branch {text or ''}"
+git thaw: "git thaw"
 
 # dogs [<user.text>]:
 #   "dogs {text or ''}"
@@ -32,12 +33,15 @@ git branch list: "git branch -vv\n"
 git remote branches: "git branch --remote\n"
 git branch <user.text>: "git branch {text}"
 git checkout: "git checkout "
-git checkout master: "git checkout master\n"
-git checkout main: "git checkout main\n"
+# git checkout master: "git checkout master\n"
+# git checkout main: "git checkout main\n"
 git checkout <user.text>:
   "git checkout {text}"
   key("tab")
 git cherry pick: "git cherry-pick "
+git cherry pick <user.text>:
+  "git cherry-pick {text}"
+  key("tab")
 git cherry pick continue: "git cherry-pick --continue "
 git cherry pick abort: "git cherry-pick --abort "
 git cherry pick skip: "git cherry-pick --skip "
@@ -63,7 +67,7 @@ git fetch all: "git fetch --all\n"
 git fetch <user.text>: "git fetch {text}"
 git fetch prune: "git fetch --prune\n"
 git grep [<user.text>]: "git grep {text or ''}"
-git gulp: "git grep "
+# git gulp: "git grep "
 git in it: "git init\n"
 git log all: "git log\n"
 git log all changes: "git log -c\n"
@@ -118,13 +122,13 @@ git stash show: "git stash show"
 git status: "git status\n"
 git switch [<user.text>]:
     "git switch {user.formatted_text(text or '', 'DASH_SEPARATED')}"
-git switch master: "git switch master "
+# git switch master: "git switch master "
 git switch main: "git switch main "
 git switch detached: "git switch --detach "
 git (switch create | new branch) [<user.text>]:
   "git nb {user.formatted_text(text or '', 'DASH_SEPARATED')}"
 git switch orphan: "git switch --orphan "
-git submodule add: "git submodule add "
+# git submodule add: "git submodule add "
 git tag: "git tag "
 
 # Convenience
