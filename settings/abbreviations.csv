@@ -24,11 +24,9 @@ afk,away from keyboard
 brb,be right back
 bin,binary
 bool,boolean
-bc,british columbia
 buf,buffer
 btn,button
 calc,calculate
-ca,canada
 cm,centimeter
 chr,char
 char,character
@@ -45,11 +43,7 @@ ctx,context
 ctrl,control
 const,constant
 ctor,constructor
-coord,coordinate
-coords,coordinates
-cpy,copy
 cnt,count
-ctr,counter
 db,database
 decl,declare
 decl,declaration
@@ -58,7 +52,6 @@ dec,decrement
 dbg,debug
 def,define
 def,definition
-deg,degree
 del,delete
 dep,depend
 deps,depends
@@ -87,7 +80,6 @@ err,error
 esc,escape
 etc,etcetera
 ex,example
-exc,exception
 exec,execute
 exp,exponent
 expr,expression
@@ -95,7 +87,6 @@ ext,extend
 ext,extension
 fs,file system
 fmt,format
-fw,framework
 func,function
 lol,funny
 gen,generic
@@ -104,14 +95,10 @@ http,hypertext
 hist,history
 img,image
 impl,implement
-iat,import table
-iat,import address table
 inc,increment
 info,information
 init,initialize
 init,initializer
-irl,in real life
-inst,instance
 int,integer
 int,interrupt
 iter,iterate
@@ -128,12 +115,9 @@ lng,language
 lol,laugh out loud
 len,length
 lib,library
-lgtm,looks good to me
-mb,manitoba
+LGTM,looks good to me
 md,markdown
 msg,message
-msf,meta sploit
-msf,meta sploit framework
 mic,microphone
 mg,milligram
 ms,millisecond
@@ -144,12 +128,9 @@ mnt,mount
 mut,mutate
 ns,nano second
 nvim,neo vim
-nb,new brunswick
-ns,nova scotia
 num,number
 obj,object
 ok,okay
-on,ontario
 opt,option
 opts,options
 os,operating system
@@ -206,21 +187,17 @@ stdout,standard out
 std,standard
 str,string
 struct,structure
-symlink,symbolic link
+St,street
 sync,synchronize
 sync,synchronous
 sys,system
 toc,table of contents
-tbl,table
-tw,taiwan
 tech,technology
 temp,temperature
 tmp,temporary
 tmp,temp
 txt,text
-toctou,time of check time of use
 tok,token
-txn,transaction
 ts,typescript
 ulti,ultimate
 uuid,unique id
@@ -230,12 +207,8 @@ utils,utilities
 util,utility
 val,value
 var,variable
-vrfy,verify
 vs,versus
 vid,video
-vids,videos
-vis,visual
-msvc,visual studio
 www,web
 wtf,what the fuck
 win,window

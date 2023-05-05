@@ -14,6 +14,10 @@ run last: user.terminal_run_last()
 rerun [<user.text>]: user.terminal_rerun_search(text or "")
 rerun search: user.terminal_rerun_search("")
 kill all: user.terminal_kill_all()
+(file | kill) save:
+    key("home")
+    "# "
+    key("enter")
 veal [<user.text>]: user.terminal_vim(text or "")
 print dir:                     "pwd\n"
 grep:                          "grep "
@@ -48,6 +52,9 @@ goma start: "goma ensure_start\n"
 goma stop: "goma stop\n"
 red green blue: "rgb "
 red green blue <user.text>: "rgb {text}"
+build content shell: "rgb content_shell"
+debug build content shell: "gb content_shell"
+op and: " && "
 
 connect to work: "connect_to_work\n"
 talon log: "title talon log && ~/.talon/bin/tail_log\n"
