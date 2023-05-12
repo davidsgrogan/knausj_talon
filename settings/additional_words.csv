@@ -1,9 +1,6 @@
 Word(s),Spoken Form (If Different)
 nmap,N map
-under-documented,under documented
 admin
-VPN
-DNS
 css
 dgrogan
 json
@@ -23,3 +20,5 @@ fieldset
 diff
 min-width,min width
 max-width,max width
+yipe
+interop

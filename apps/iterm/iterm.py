@@ -14,11 +14,13 @@ app: iterm2
 directories_to_remap = {}
 directories_to_exclude = {}
 
-# This is not the standard shortcuts. I use them with the kinesis.
+# This is not the standard shortcut. I use them with the kinesis.
 @ctx.action_class("app")
 class AppActions:
     def tab_next():
         actions.key("ctrl-pagedown")
+    def tab_previous():
+        actions.key("ctrl-pageup")
 
 @ctx.action_class("edit")
 class EditActions:
@@ -79,9 +81,6 @@ class UserActions:
     # def file_manager_select_file(path: str):
     #     """selects the file"""
     #     actions.insert(path)
-
-    def tab_jump(number: int):
-        actions.key(f"cmd-{number}")
 
     def tab_final():
         actions.key("cmd-9")

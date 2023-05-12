@@ -25,7 +25,7 @@ bar outline: user.vscode("outline.focus")
 bar run: user.vscode("workbench.view.debug")
 bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
-bar test: user.vscode("workbench.view.testing.focus")
+#bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
 
 # Symbol search
@@ -303,3 +303,4 @@ search last: user.vscode("search.action.focusPreviousSearchResult")
 
 open in {user.browsers}: user.open_in(browsers)
 move file [to] flex directory: user.move_to_flex()
+ask me: "AMA << "
