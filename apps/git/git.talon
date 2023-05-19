@@ -2,7 +2,7 @@ tag: terminal
 and tag: user.git
 -
 git mb: "git map-branches\n"
-git rebase update: "git rebase-update -n "
+git rebase update: "git rebase-update -n \n"
 git upstream (deaf | diff): "git upstream-diff \n"
 git upstream (deaf | diff) stat: "git upstream-diff --stat\n"
 git seal upload [<user.text>]:
