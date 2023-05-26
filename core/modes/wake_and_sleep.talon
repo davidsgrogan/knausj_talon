@@ -16,6 +16,7 @@ mode: all
 ^(snows | snooze)$: speech.disable()
 ^talon sleep [<phrase>]$: speech.disable()
 ^holy guacamole$: speech.enable()
+^mittens the bad cat$: speech.enable()
 
 key(ctrl-0):
   speech.toggle()

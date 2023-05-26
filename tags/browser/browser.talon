@@ -33,3 +33,5 @@ show history: browser.show_history()
 
 open in {user.browsers}: user.open_in(browsers)
 view source: user.view_source()
+
+ten (close | plus): user.tab_close_wrapper()

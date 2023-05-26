@@ -49,10 +49,12 @@ git cherry pick skip: "git cherry-pick --skip "
 git clone: "git clone "
 # Leave \n out for confirmation since the operation is destructive
 git clean everything: "git clean -dfx"
-git commit message [<user.text>]: "git commit -m '{text or \'\'}'"
+git commit message [<user.text>]:
+  "git commit -m \"{text or \'\'}\""
+  key("left")
 git commit all: "git commit -a "
-git commit all message:
-  "git commit -a -m \"\""
+git commit all message [<user.text>]:
+  "git commit -a -m \"{text or \'\'}\""
   key("left")
 git commit [amend] no edit: "git commit -a --amend --no-edit"
 git commit$: "git commit "
@@ -73,6 +75,9 @@ git in it: "git init\n"
 git log all: "git log\n"
 git log all changes: "git log -c\n"
 git log: "git log "
+git log <user.text>:
+  "git log {text}"
+  key("tab")
 git log changes: "git log -c "
 git log stat: "git log --stat "
 git merge: "git merge "
@@ -114,6 +119,9 @@ git remote remove: "git remote remove "
 git remote show origin: "git remote show origin\n"
 git revert no edit: "git revert --no-edit "
 git show: "git show "
+git show <user.text>:
+  "git show {text}"
+  key("tab")
 git show stat: "git show --stat "
 git stash pop: "git stash pop\n"
 git stash: "git stash "
