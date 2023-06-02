@@ -15,7 +15,7 @@ mode: all
     user.engine_sleep()
 ^(snows | snooze)$: speech.disable()
 ^talon sleep [<phrase>]$: speech.disable()
-^holy guacamole$: speech.enable()
+# ^holy guacamole$: speech.enable()
 ^mittens the bad cat$: speech.enable()
 
 key(ctrl-0):
