@@ -30,6 +30,7 @@ calc,calculate
 cm,centimeter
 chr,char
 char,character
+cert,certificate
 cls,class
 cli,client
 col,column
@@ -61,13 +62,13 @@ dev,development
 dev,device
 dict,dictation
 dict,dictionary
+diff,difference
 dir,direction
 dir,directory
 dist,distribution
 Dr.,doctor
 doc,document
 docs,documents
-dbl,double
 deque,double ended queue
 dup,dupe
 dup,duplicate

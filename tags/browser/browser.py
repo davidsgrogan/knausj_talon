@@ -68,7 +68,9 @@ class Actions:
         if address == "" or address is None:
             # print("open_in got a blank address, so not doing anything")
             return
-        subprocess.run(f"/usr/bin/open -a {browsers} {address}", shell=True)
+        dogs = f"/usr/bin/open -a {browsers} '{address}'"
+        print("running ", dogs)
+        subprocess.run(f"/usr/bin/open -a {browsers} '{address}'", shell=True)
 
         # https://stackoverflow.com/questions/48056052/webbrowser-get-could-not-locate-runnable-browser
         # if open -a doesn't work well.
