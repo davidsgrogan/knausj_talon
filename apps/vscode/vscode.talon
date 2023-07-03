@@ -305,5 +305,7 @@ search last: user.vscode("search.action.focusPreviousSearchResult")
 
 
 open in {user.browsers}: user.open_in(browsers)
-move file [to] flex directory: user.move_to_flex()
+#move file [to] flex directory: user.move_to_flex()
 ask me: "AMA << "
+
+copy command id:         user.copy_command_id()
