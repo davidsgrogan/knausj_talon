@@ -132,10 +132,16 @@ def every_word(word_func):
 # All formatters (code and prose)
 formatters_dict = {
     "NOOP": (SEP, lambda i, word, _: word),
-    "DOUBLE_UNDERSCORE": (NOSEP, first_vs_rest(lambda w: "__%s__" % w)),
     "KEEP_GOING": (SEP, first_vs_rest(lambda w: " %s" % w)),
-    "PRIVATE_CAMEL_CASE": (NOSEP, first_vs_rest(lambda w: w.lower(), lambda w: w.capitalize())),
-    "PROTECTED_CAMEL_CASE": (NOSEP, first_vs_rest(lambda w: w.lower(), lambda w: w.capitalize())),
+    "DOUBLE_UNDERSCORE": (NOSEP, first_vs_rest(lambda w: f"__{w}__")),
+    "PRIVATE_CAMEL_CASE": (
+        NOSEP,
+        first_vs_rest(lambda w: w.lower(), lambda w: w.capitalize()),
+    ),
+    "PROTECTED_CAMEL_CASE": (
+        NOSEP,
+        first_vs_rest(lambda w: w.lower(), lambda w: w.capitalize()),
+    ),
     "PUBLIC_CAMEL_CASE": (NOSEP, every_word(lambda w: w.capitalize())),
     "SNAKE_CASE": (
         NOSEP,
@@ -155,8 +161,8 @@ formatters_dict = {
     "SPACE_SURROUNDED_STRING": (SEP, surround(" ")),
     "DOT_SEPARATED": words_with_joiner("."),
     "DOT_SNAKE": (NOSEP, lambda i, word, _: "." + word if i == 0 else "_" + word),
+    # "SLASH_SEPARATED": (NOSEP, every_word(lambda w: "/" + w)),
     "SLASH_SEPARATED": words_with_joiner("/"),
-#    "SLASH_SEPARATED": (NOSEP, every_word(lambda w: "/" + w)),
     "CAPITALIZE_FIRST_WORD": (
         SEP,
         first_vs_rest(lambda w: title_case()(0, w, True)),
@@ -174,12 +180,12 @@ code_formatter_names = {
     "dunder": "DOUBLE_UNDERSCORE",
     "hammer": "PUBLIC_CAMEL_CASE",
     "kebab": "DASH_SEPARATED",
-    "keep": formatters_dict["KEEP_GOING"],
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
     "slasher": "SLASH_SEPARATED",
     "smash": "NO_SPACES",
     "snake": "SNAKE_CASE",
+    "keep": "KEEP_GOING",
     "string": "SINGLE_QUOTED_STRING",
 }
 prose_formatter_names = {
