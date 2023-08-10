@@ -243,11 +243,12 @@ simple_keys = [
 ]
 
 alternate_keys = {
-    "wipe": "backspace",
+    # "wipe": "backspace",
     "delete": "backspace",
     #'junk': 'backspace',
     "deep": "backspace",
     "deet": "backspace",
+    "drill": "delete",
     "for delete": "delete",
     "for deet": "delete",
     "for deep": "delete",
