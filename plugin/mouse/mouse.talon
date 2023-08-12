@@ -61,7 +61,7 @@ right drag | righty drag:
     user.grid_close()
 end drag | drag end: user.mouse_drag_end()
 (small | wheel) down:
-    user.mouse_move_center_active_window()
+    user.mouse_move_center_active_window_if_necessary()
     user.smooth_wheel_scroll("up")
 wheel down here:
     user.mouse_move_center_active_window()
@@ -75,7 +75,7 @@ wheel downer here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down_continuous()
 (small | wheel) up:
-    user.mouse_move_center_active_window()
+    user.mouse_move_center_active_window_if_necessary()
     user.smooth_wheel_scroll("down")
 wheel up here:
     user.mouse_move_center_active_window()
