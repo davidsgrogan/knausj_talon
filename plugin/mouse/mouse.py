@@ -212,6 +212,7 @@ class Actions:
         global control_mouse_forced
         if not actions.tracking.control_enabled():
             actions.tracking.control_toggle(True)
+            self.mouse_hide_cursor()
             control_mouse_forced = True
 
     def copy_mouse_position():
@@ -265,6 +266,7 @@ def show_cursor_helper(show):
         except OSError:
             print(f"Unable to show_cursor({str(show)})")
     else:
+        # print(f"about to call cursor_visible({str(show)})")
         ctrl.cursor_visible(show)
 
 
@@ -343,7 +345,14 @@ def gaze_scroll():
             return
 
         midpoint = rect.y + rect.height / 2
-        amount = int(((y - midpoint) / (rect.height / 10)) ** 3)
+        # This is backwards for me because I have reverse scrolling.
+        negative = y - midpoint > 0
+        # I usually want to scroll up faster than down.
+        exponent = 2.7 if negative else 3.1
+        amount = round(abs(((y - midpoint) / (rect.height / 10)) ** exponent))
+        # print("amount = ", amount)
+        if negative:
+            amount *= -1
         actions.mouse_scroll(by_lines=False, y=amount)
 
     # print(f"gaze_scroll: {midpoint} {rect.height} {amount}")
@@ -362,6 +371,7 @@ def stop_scroll():
     if control_mouse_forced:
         actions.tracking.control_toggle(False)
         control_mouse_forced = False
+        self.mouse_show_cursor()
 
     scroll_job = None
     gaze_job = None
