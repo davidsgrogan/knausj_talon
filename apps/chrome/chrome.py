@@ -46,6 +46,15 @@ class UserActions:
         actions.sleep("180ms")
         actions.app.tab_close()
 
+    def tab_duplicate():
+        try:
+            if app.platform == "mac" and actions.user.menu_select('Tab|Duplicate Tab'):
+                return
+        except Exception as e:
+            print(e, "when trying fancy tab_duplicate")
+
+        actions.next()
+
 
 @ctx.action_class("browser")
 class BrowserActions:
