@@ -159,7 +159,7 @@ class Actions:
         """Scrolls down continuously"""
         global continuous_scoll_mode
         continuous_scoll_mode = "scroll down continuous"
-        mouse_scroll(setting_mouse_continuous_scroll_amount.get())()
+        mouse_scroll(-setting_mouse_continuous_scroll_amount.get())()
 
         if scroll_job is None:
             start_scroll()
