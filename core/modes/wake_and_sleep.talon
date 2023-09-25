@@ -5,7 +5,7 @@ mode: all
     user.mouse_wake()
     user.history_enable()
     user.talon_mode()
-^sleep all [<phrase>]$:
+^(snows | snooze) [<phrase>]$:
     user.switcher_hide_running()
     user.history_disable()
     user.homophones_hide()
@@ -13,7 +13,7 @@ mode: all
     user.mouse_sleep()
     speech.disable()
     user.engine_sleep()
-^(snows | snooze)$: speech.disable()
+^(snows | snooze) light$: speech.disable()
 ^talon sleep [<phrase>]$: speech.disable()
 # ^holy guacamole$: speech.enable()
 ^mittens the bad cat$: speech.enable()
