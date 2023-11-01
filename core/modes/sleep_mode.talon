@@ -35,4 +35,6 @@ settings():
     user.history_enable()
     user.talon_mode()
 
-^(talon wake)+$: speech.enable()
+^mittens the bad cat$: speech.enable()
+key(ctrl-0):
+    speech.toggle()

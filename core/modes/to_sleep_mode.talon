@@ -14,7 +14,7 @@ mode: dictation
 # because it's part of the rule definition, but "hey bob" will be ignored, because
 # we don't do anything with the <phrase> in the body of the command.
 
-^sleep all [<phrase>]$:
+^(snows | snooze) [<phrase>]$:
     user.switcher_hide_running()
     user.history_disable()
     user.homophones_hide()
@@ -23,4 +23,5 @@ mode: dictation
     speech.disable()
     user.engine_sleep()
 
-^talon sleep [<phrase>]$: speech.disable()
+#^talon sleep [<phrase>]$: speech.disable()
+^(snows | snooze) light$: speech.disable()
