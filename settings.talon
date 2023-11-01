@@ -24,7 +24,7 @@ settings():
     # 2 = on but not with zoom mouse mode
     user.mouse_enable_pop_click = 1
 
-    # Uncomment the below to enable mouse scroll down using hiss noise
+    # Enable if you like to use the hissing noise to do mouse scroll
     user.mouse_enable_hiss_scroll = 0
 
     # When enabled, the 'Scroll Mouse' GUI will not be shown.
