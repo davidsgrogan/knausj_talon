@@ -253,23 +253,6 @@ class UserActions:
     def multi_cursor_skip_occurrence():
         actions.user.vscode("editor.action.moveSelectionToNextFindMatch")
 
-    # snippet.py support begin
-    def snippet_search(text: str):
-        actions.user.vscode("editor.action.insertSnippet")
-        actions.insert(text)
-
-    def snippet_insert(text: str):
-        """Inserts a snippet"""
-        actions.user.vscode("editor.action.insertSnippet")
-        actions.insert(text)
-        actions.key("enter")
-
-    def snippet_create():
-        """Triggers snippet creation"""
-        actions.user.vscode("workbench.action.openSnippets")
-
-    # snippet.py support end
-
     def tab_jump(number: int):
         if number < 10:
             if is_mac:
@@ -420,3 +403,6 @@ class UserActions:
         print(filename_from_vscode)
         # match = re.search(r'(^.*c/1/src/).*([^][html|js|css]$)')
         actions.user.vscode_with_plugin("andreas.renameFile", "puppies.txt")
+
+    def insert_snippet(body: str):
+        actions.user.run_rpc_command("editor.action.insertSnippet", {"snippet": body})
