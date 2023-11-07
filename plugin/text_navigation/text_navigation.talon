@@ -69,8 +69,8 @@ navigate [{user.arrow_key}] [{user.navigation_action}] [{user.navigation_target_
 #   Specifies the target to search for/navigate to.
 
 # The functionality for all these commands is covered in the lines above, but these commands are kept here for convenience. Originally from word_selection.talon.
-word neck [<number_small>]:
-    user.navigation_by_name("SELECT", "RIGHT", "DEFAULT", "word", number_small or 1)
+# word neck [<number_small>]:
+#     user.navigation_by_name("SELECT", "RIGHT", "DEFAULT", "word", number_small or 1)
 word pre [<number_small>]:
     user.navigation_by_name("SELECT", "LEFT", "DEFAULT", "word", number_small or 1)
 small word neck [<number_small>]:
