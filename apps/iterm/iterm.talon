@@ -15,3 +15,7 @@ move tab left: key(super-h)
 move tab right: key(super-j)
 last one: edit.find_previous()
 clear buffer: key(super-k)
+
+copy output:
+  key(cmd-shift-a)
+  edit.copy()

@@ -1,4 +1,4 @@
-mode: sleep
+mode: all
 -
 settings():
     # Stop continuous scroll/gaze scroll with a pop
