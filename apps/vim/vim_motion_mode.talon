@@ -14,24 +14,24 @@ and not tag: user.vim_command_mode
 # Comment out plugins below that you don't use
 # Is the list below is only plugins that have grammars we use when outside of
 # terminal mode.
-tag(): user.vim_easymotion
-tag(): user.vim_change_inside_surroundings
-tag(): user.vim_surround
-tag(): user.vim_ultisnips
-tag(): user.vim_ale
-tag(): user.vim_cscope
-tag(): user.vim_fugitive
-tag(): user.vim_fugitive_summary
-tag(): user.vim_grammarous
-tag(): user.vim_markdown
-tag(): user.vim_markdown_toc
-tag(): user.vim_youcompleteme
-tag(): user.vim_easy_align
-tag(): user.vim_eunuch
-tag(): user.vim_rooter
-tag(): user.vim_suda
-tag(): user.vim_treesitter
-tag(): user.vim_treesitter_textobjects
+# tag(): user.vim_easymotion
+# tag(): user.vim_change_inside_surroundings
+# tag(): user.vim_surround
+# tag(): user.vim_ultisnips
+# tag(): user.vim_ale
+# tag(): user.vim_cscope
+# tag(): user.vim_fugitive
+# tag(): user.vim_fugitive_summary
+# tag(): user.vim_grammarous
+# tag(): user.vim_markdown
+# tag(): user.vim_markdown_toc
+# tag(): user.vim_youcompleteme
+# tag(): user.vim_easy_align
+# tag(): user.vim_eunuch
+# tag(): user.vim_rooter
+# tag(): user.vim_suda
+# tag(): user.vim_treesitter
+# tag(): user.vim_treesitter_textobjects
 
 ###
 # `code/vim.py` actions - includes most motions and core commands
@@ -108,7 +108,7 @@ open [this] link:
 (open this file offset|file jump offset): user.vim_normal_mode("gF")
 # XXX - should automate this with the previous open for cases when a file
 # doesn't exist...
-file create this: 
+file create this:
     user.vim_command_mode(':call writefile([], expand("<cfile>"), "b")\n')
 (river this [file]|file river jump):
     user.vim_set_normal_mode()
@@ -676,5 +676,5 @@ last <user.unmodified_key>:
 popup clear:
     user.vim_command_mode(":call popup_clear(1)")
 
-yank funk: 
+yank funk:
     user.vim_normal_mode("f(Byt(")

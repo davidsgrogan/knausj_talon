@@ -116,7 +116,7 @@ class EditActions:
         # getting interpreted? in example would be "sit graves pasty round".
         # typically the output of this will be something like:
         # `(<pasted content>)`
-        # but the intended output would be 
+        # but the intended output would be
         # `<pasted content>()`
         # for now the only way i see to fix this is to introduce an artificial
         # delay to allow vim to actually paste the content...
@@ -126,24 +126,23 @@ class EditActions:
         #actions.user.vim_normal_mode('"+p')
 
 
+# @ctx.action_class("user")
+# class UserActions:
+#     def delete_word_right():
+#         actions.user.vim_normal_mode("dw")
 
-@ctx.action_class("user")
-class UserActions:
-    def delete_word_right():
-        actions.user.vim_normal_mode("dw")
+    # def delete_word_left():
+    #     actions.user.vim_normal_mode("db")
 
-    def delete_word_left():
-        actions.user.vim_normal_mode("db")
+    # def delete_line_remaining():
+    #     actions.user.vim_normal_mode("d$")
 
-    def delete_line_remaining():
-        actions.user.vim_normal_mode("d$")
+    # def delete_line_beginning():
+    #     actions.user.vim_normal_mode("d0")
 
-    def delete_line_beginning():
-        actions.user.vim_normal_mode("d0")
+    # def line_find_forward(key: str):
+    #     print(key)
+    #     actions.user.vim_any_motion_mode(f"f{key}")
 
-    def line_find_forward(key: str):
-        print(key)
-        actions.user.vim_any_motion_mode(f"f{key}")
-
-    def line_find_backward(key: str):
-        actions.user.vim_any_motion_mode(f"F{key}")
+    # def line_find_backward(key: str):
+    #     actions.user.vim_any_motion_mode(f"F{key}")

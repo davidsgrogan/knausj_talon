@@ -429,8 +429,8 @@ ctx.lists["self.vim_surround_targets"] = {
     "paragraph": "p",
     "spaces": "  ",  # double spaces is required because surround gets confused
     "tags": "t",
-    "h1 tags": "<h1>",
-    "h2 tags": "<h2>",
+    # "h1 tags": "<h1>",
+    # "h2 tags": "<h2>",
     "div tags": "<div>",
     "bold tags": "<b>",
 }
@@ -997,11 +997,11 @@ class NeoVimRPC:
 
 
 class VimDirectInput:
-    """Implementation of functionality when RPC is not available. 
+    """Implementation of functionality when RPC is not available.
 
     This relies on a more finnicky method of detecting no changes, stringing
     commands together, which can be a bit buggy. It's supported for people that
-    can't use neovim RPC for some reason, like if you are using something with 
+    can't use neovim RPC for some reason, like if you are using something with
     a VIM-like mode, like a consol with bindkeys -v set"""
 
     def run_command_mode_command(self, cmd):
@@ -1178,7 +1178,7 @@ class VimMode:
     def is_replace_mode(self):
         return self.mode() in ["R", "Rv", "Rx", "Rc"]
 
-    # XXX - this can maybe get called by the parent class, since will only have 
+    # XXX - this can maybe get called by the parent class, since will only have
     # when the parent class is VimRPC
     def mode(self):
         if self.nvrpc.init_ok is True:
