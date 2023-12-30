@@ -3,7 +3,7 @@ double dash: "--"
 triple quote: user.paste('"""')
 (triple grave | triple back tick | gravy): insert("```")
 (dot dot | dotdot): ".."
-ellipses: "..."
+ellipsis: "..."
 # Even though spamma is also in keys.py, the comma shows up without a space in vscode if I don't include this line in symbols.talon.
 spamma: ", "
 stacka: ": "
