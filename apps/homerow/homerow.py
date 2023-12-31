@@ -1,4 +1,4 @@
-from talon import Context, Module, actions, app, ui
+from talon import Context, Module, actions, app, ui, ctrl
 
 ctx = Context()
 mod = Module()
@@ -38,6 +38,15 @@ class UserActions:
         actions.key("enter")
         complete_homerow_search()
 
+    def my_toggle_sleep_with_homerow():
+        position = ctrl.mouse_pos()
+        # print(position)
+        # KeepingYouAwake
+        actions.user.homerow_search('Right click to show menu')
+        actions.sleep('100ms')
+        actions.key('enter')
+        actions.sleep('200ms')
+        ctrl.mouse_move(*position)
 
 @mod.action_class
 class Actions:
@@ -46,6 +55,9 @@ class Actions:
 
     def homerow_pick(label: str):
         """Pick a label in Homerow"""
+
+    def my_toggle_sleep_with_homerow():
+        """dogs"""
 
 
 def complete_homerow_search():

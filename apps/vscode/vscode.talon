@@ -192,16 +192,16 @@ git commit [<user.text>]:
 git commit undo: user.vscode("git.undoCommit")
 git commit amend: user.vscode("git.commitStagedAmend")
 git diff: user.vscode("git.openChange")
-git fetch: user.vscode("git.fetch")
-git fetch all: user.vscode("git.fetchAll")
+# git fetch: user.vscode("git.fetch")
+# git fetch all: user.vscode("git.fetchAll")
 git ignore: user.vscode("git.ignore")
 git merge: user.vscode("git.merge")
 git output: user.vscode("git.showOutput")
-git pull: user.vscode("git.pullRebase")
-git push: user.vscode("git.push")
-git push force: user.vscode("git.pushForce")
+# git pull: user.vscode("git.pullRebase")
+# git push: user.vscode("git.push")
+# git push force: user.vscode("git.pushForce")
 git rebase abort: user.vscode("git.rebaseAbort")
-git reveal: user.vscode("git.revealInExplorer")
+# git reveal: user.vscode("git.revealInExplorer")
 change revert: user.vscode("git.revertSelectedRanges")
 git stash: user.vscode("git.stash")
 git stash pop: user.vscode("git.stashPop")
@@ -212,12 +212,18 @@ git stage all: user.vscode("git.stageAll")
 #git sync: user.vscode("git.sync")
 git unstage: user.vscode("git.unstage")
 git unstage all: user.vscode("git.unstageAll")
-pull request: user.vscode("pr.create")
+# pull request: user.vscode("pr.create")
 # Use keyboard shortcuts because VSCode relies on when clause contexts to choose the appropriate
 # action: https://code.visualstudio.com/api/references/when-clause-contexts
 change next: key(alt-f5)
 change last: key(shift-alt-f5)
 change preview: user.vscode("editor.action.dirtydiff.next")
+
+# Merge conflict resolution
+merge next: user.vscode("merge-conflict.next")
+merge incoming: user.vscode("merge-conflict.accept.incoming")
+merge current: user.vscode("merge-conflict.accept.current")
+merge both: user.vscode("merge-conflict.accept.both")
 
 # Testing
 # test run: user.vscode("testing.runAtCursor")
@@ -313,4 +319,4 @@ open in {user.browsers}: user.open_in(browsers)
 #move file [to] flex directory: user.move_to_flex()
 ask me: "AMA << "
 
-copy command id:         user.copy_command_id()
+# copy command id:         user.copy_command_id()
