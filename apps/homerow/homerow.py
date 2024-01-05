@@ -38,15 +38,25 @@ class UserActions:
         actions.key("enter")
         complete_homerow_search()
 
-    def my_toggle_sleep_with_homerow():
-        position = ctrl.mouse_pos()
-        # print(position)
-        # KeepingYouAwake
-        actions.user.homerow_search('Right click to show menu')
-        actions.sleep('100ms')
-        actions.key('enter')
-        actions.sleep('200ms')
-        ctrl.mouse_move(*position)
+    # def my_toggle_sleep_with_homerow():
+    #     position = ctrl.mouse_pos()
+    #     # print(position)
+    #     # KeepingYouAwake
+    #     actions.user.homerow_search('Right click to show menu')
+    #     actions.sleep('100ms')
+    #     actions.key('enter')
+    #     actions.sleep('200ms')
+    #     ctrl.mouse_move(*position)
+
+    def my_toggle_sleep_directly():
+        hs = ui.apps(bundle="info.marcel-dierkes.KeepingYouAwake")[0]
+        hs_menu_extra = hs.element.AXExtrasMenuBar.children.find_one(
+            AXRole="AXMenuBarItem", AXSubrole="AXMenuExtra", max_depth=0
+        )
+        try:
+            hs_menu_extra.perform("AXPress")
+        except BaseException:
+            pass  # This appears to fail but doesn't
 
 @mod.action_class
 class Actions:
@@ -56,7 +66,10 @@ class Actions:
     def homerow_pick(label: str):
         """Pick a label in Homerow"""
 
-    def my_toggle_sleep_with_homerow():
+    # def my_toggle_sleep_with_homerow():
+    #     """dogs"""
+
+    def my_toggle_sleep_directly():
         """dogs"""
 
 
