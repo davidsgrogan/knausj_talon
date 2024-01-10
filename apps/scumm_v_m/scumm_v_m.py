@@ -69,25 +69,29 @@ class UserActions:
         game_rect = get_320_200_rect()
         # actions.mouse_move(game_rect.left, game_rect.top)
         # return
-        sleep_time = "500ms"
+        sleep_time = "50ms"
         sword1_x = game_rect.left + game_rect.width * 0.721
         sword_y = game_rect.top + game_rect.height * 0.089
         actions.mouse_move(sword1_x, sword_y)
-        actions.sleep(sleep_time)
         ctrl.mouse_click(1)
+        actions.sleep(sleep_time)
+
         sword2_x = game_rect.left + game_rect.width * 0.947
         actions.mouse_move(sword2_x, sword_y)
-        actions.sleep(sleep_time)
         ctrl.mouse_click(1)
+        actions.sleep(sleep_time)
 
         short_y = game_rect.top + game_rect.height * 0.167
         actions.mouse_move(sword1_x, short_y)
-        actions.sleep(sleep_time)
-        # ctrl.mouse_click(0)
-        # actions.sleep("50ms")
         ctrl.mouse_click(1)
-        # actions.sleep("50ms")
-        # ctrl.mouse_click(0)
+        actions.sleep(sleep_time)
+
+        actions.mouse_move(sword2_x, short_y)
+        ctrl.mouse_click(0)
+        actions.sleep("50ms")
+        ctrl.mouse_click(1)
+        actions.sleep("50ms")
+        ctrl.mouse_click(0)
 
     def print_the_stuff():
       rect = ui.active_window().rect
