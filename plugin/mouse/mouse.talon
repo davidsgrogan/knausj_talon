@@ -65,7 +65,7 @@ mid click:
     mouse_click()
     # close the mouse grid
     user.grid_close()
-left drag | drag:
+left drag | drag | drag start:
     # close zoom if open
     user.zoom_close()
     user.mouse_drag(0)
@@ -132,5 +132,6 @@ wheel tiny right here:
     user.mouse_scroll_right(0.5)
 copy mouse position: user.copy_mouse_position()
 
+# To scroll with a hiss sound, set mouse_enable_hiss_scroll to true in settings.talon
 mouse hiss up: user.hiss_scroll_up()
 mouse hiss down: user.hiss_scroll_down()

@@ -24,6 +24,7 @@ settings():
     user.code_private_variable_formatter = "SNAKE_CASE"
     user.code_protected_variable_formatter = "SNAKE_CASE"
     user.code_public_variable_formatter = "SNAKE_CASE"
+
 # NOTE: migrated from generic, as they were only used here, though once cpp support is added, perhaps these should be migrated to a tag together with the commands below
 #state include:
 #    insert('#include ""')
@@ -31,9 +32,9 @@ settings():
 
 #control flow
 #best used with a push like command
-#the below example may not work in editors that automatically add the closing bracket
+#the below example may not work in editors that automatically add the closing brace
 #if so uncomment the two lines and comment out the rest accordingly
-push brackets:
+push braces:
     edit.line_end()
     insert("{")
     key(enter)
