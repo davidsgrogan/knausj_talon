@@ -2,6 +2,9 @@ settings():
     # Adjust the scale of the imgui
     imgui.scale = 1.3
 
+    # Uncomment to enable dark mode for talon help menus
+    # imgui.dark_mode = true
+
     # If `true`, automatically show the picker GUI when the file manager has focus
     user.file_manager_auto_show_pickers = false
 
@@ -65,6 +68,9 @@ settings():
     # 'size aware' keeps absolute window size the same, except full-height or
     # -width windows are resized to stay full-height/width.
     # user.window_snap_screen = "size aware"
+
+    # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
+    # user.listening_timeout_minutes = 3
 
 # Uncomment to enable the curse yes/curse no commands (show/hide mouse cursor).
 # See issue #688 for more detail: https://github.com/talonhub/community/issues/688
