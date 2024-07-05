@@ -5,3 +5,6 @@ set volume <number>: user.media_set_volume(number)
 [media] play next: key(next)
 [media] play previous: key(prev)
 media (play | pause): user.play_pause()
+
+fix volume: user.change_input_volume(82)
+# osascript -e "set volume input volume 80"

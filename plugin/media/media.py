@@ -1,4 +1,5 @@
 from talon import Module, actions, app
+from talon.mac import applescript
 
 mod = Module()
 
@@ -11,3 +12,8 @@ class Actions:
             actions.key("play_pause")
         else:
             actions.key("play")
+
+    def change_input_volume(volume: int):
+        """David wrote this"""
+        # if app.platform == "mac":
+        applescript.run(f"""set volume input volume {volume}""")

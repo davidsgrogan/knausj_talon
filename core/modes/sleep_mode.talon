@@ -38,3 +38,5 @@ settings():
 ^mittens the bad cat$: speech.enable()
 key(ctrl-0):
     speech.toggle()
+
+sorry one second: speech.disable()

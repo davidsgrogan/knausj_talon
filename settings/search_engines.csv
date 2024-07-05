@@ -2,6 +2,6 @@ URL Template,Name
 https://www.amazon.com/s/?field-keywords=%s,amazon
 https://www.google.com/search?q=%s,google
 https://maps.google.com/maps?q=%s,map
-https://scholar.google.com/scholar?q=%s,scholar
 https://en.wikipedia.org/w/index.php?search=%s,wiki
 http://moma/%s,moma
+https://search.talonvoice.com/search/?q=%s&fold_case=auto&regex=false&context=true,talon search

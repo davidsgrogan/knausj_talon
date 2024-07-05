@@ -12,9 +12,8 @@ tag: browser
 
 mod.list("browsers", "some description")
 Context().lists["self.browsers"] = {
-    # Without -g, firefox does not open the new site if the browser is not
-    # already running.
-    "firefox": "/Applications/Firefox.app -g",
+    "firefox": "/Applications/Firefox.app",
+    "brave": "/Applications/Brave\\ Browser.app",
     "chrome": "/Applications/Google\\ Chrome.app",
     "canary": "/Applications/Google\\ Chrome\\ Canary.app",
     "stable": "/Applications/Google\\ Chrome.app",
