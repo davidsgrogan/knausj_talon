@@ -19,3 +19,4 @@ help help: user.help_search("help")
 ^help active context$:                 user.help_active_context_toggle()
 
 help scope$: user.help_scope_toggle()
+help snip: user.help_list("user.snippet")
