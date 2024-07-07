@@ -327,3 +327,7 @@ open in {user.browsers}: user.open_in(browsers)
 ask me: "AMA << "
 
 # copy command id:         user.copy_command_id()
+
+split alter: user.vscode("alternateFile.alternateFileInSplit")
+pop alter: user.vscode("alternateFile.alternateFile")
+(create | make) alter: user.vscode("alternateFile.createAlternateFile")
