@@ -32,6 +32,10 @@ app: chrome
 
 @mod.action_class
 class Actions:
+    def tab_pop_out():
+        """dingerz"""
+        pass
+
     def chrome_mod(key: str):
         """Press the specified key with the correct modifier key for the OS"""
         if app.platform == "mac":
@@ -52,6 +56,16 @@ class UserActions:
                 return
         except Exception as e:
             print(e, "when trying fancy tab_duplicate")
+
+        actions.next()
+
+    def tab_pop_out():
+        try:
+            if app.platform == "mac" and actions.user.menu_select(
+                    'Tab|Move Tab to New Window'):
+                return
+        except Exception as e:
+            print(e, "when trying fancy tab_pop_out")
 
         actions.next()
 
