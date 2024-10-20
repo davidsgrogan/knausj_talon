@@ -25,7 +25,7 @@ def click_AXPopUpButton_on_webpage(button_text_or_label: str):
         button_element = main_window.children.find_one(
             AXRole="AXPopUpButton",
             AXDescription=button_text_or_label,
-            max_depth=20
+            max_depth=30
         )
     except ui.UIErr:
         print(f"Button with text/label '{button_text_or_label}' not found.")
