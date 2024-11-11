@@ -105,23 +105,6 @@ def letters(m) -> str:
 
 ctx = Context()
 
-
-### HERE
-modifier_keys = {
-    # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",  #'alter': 'alt',
-    "control": "ctrl",  #'troll':   'ctrl',
-    "shift": "shift",  #'sky':     'shift',
-    "super": "super",
-}
-if app.platform == "mac":
-    modifier_keys["command"] = "cmd"
-    modifier_keys["option"] = "alt"
-ctx.lists["self.modifier_key"] = modifier_keys
-ctx.lists["self.letter"] = alphabet_list
-### TO HERE??
-
-
 # `punctuation_words` is for words you want available BOTH in dictation and as key names in command mode.
 # `symbol_key_words` is for key names that should be available in command mode, but NOT during dictation.
 punctuation_words = {

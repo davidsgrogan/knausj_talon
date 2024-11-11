@@ -214,6 +214,7 @@ def de_camel(text: str) -> str:
 formatter_list = [
     CustomFormatter("NOOP", lambda text: text),
     CustomFormatter("TRAILING_SPACE", lambda text: f"{text} "),
+    CustomFormatter("KEEP_GOING", lambda text: f" {text}"),
     CustomFormatter("DOUBLE_QUOTED_STRING", lambda text: f'"{text}"'),
     CustomFormatter("SINGLE_QUOTED_STRING", lambda text: f"'{text}'"),
     CustomFormatter("SPACE_SURROUNDED_STRING", lambda text: f" {text} "),
