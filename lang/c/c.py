@@ -122,6 +122,9 @@ class UserActions:
     def code_operator_or():
         actions.auto_insert(" || ")
 
+    def code_operator_not():
+        actions.auto_insert("!")
+
     def code_operator_bitwise_and():
         actions.auto_insert(" & ")
 
@@ -139,6 +142,9 @@ class UserActions:
 
     def code_operator_bitwise_exclusive_or_assignment():
         actions.auto_insert(" ^= ")
+
+    def code_operator_bitwise_not():
+        actions.auto_insert("~")
 
     def code_operator_bitwise_left_shift():
         actions.auto_insert(" << ")
