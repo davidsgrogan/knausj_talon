@@ -400,11 +400,11 @@ class UserActions:
             print(error_str)
             # app.notify(error_str)
             return None
-        # urlified_string = re.sub(
-        #     '^.*c/1/src/(.+)',
-        #     r'https://b2620015c011a0202817f7e0a9105b3960050000000000000000001.proxy.googleprod.com/c/1/src/\1',
-        #     filename_from_vscode)
-        urlified_string = re.sub('~', '/Users/dgrogan', filename_from_vscode)
+        urlified_string = re.sub(
+            '^.*c/1/src/(.+)',
+            r'https://b2620015c011a02023e5edf5350e538f80050000000000000000001.proxy.googleprod.com/c/1/src/\1',
+            filename_from_vscode)
+        # line nessurlified_string = re.sub('~', '/Users/dgrogan', filename_from_vscode)
         # When above string gets out of date, can just punt on it and always
         # open in chrome from vscode with the below.
         # r'http://dgrogan.sfo.corp.google.com/c/1/src/\1',

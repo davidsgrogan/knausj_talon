@@ -5,6 +5,7 @@ git mb: "git map-branches\n"
 git rebase update: "git rebase-update -n \n"
 git upstream (deaf | diff): "git upstream-diff \n"
 git upstream (deaf | diff) stat: "git upstream-diff --stat\n"
+git seal upload only: "git-cl upload\n"
 git seal upload [<user.text>]:
   "git-cl upload -t \"\""
   key("left")

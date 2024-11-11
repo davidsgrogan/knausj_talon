@@ -17,3 +17,7 @@ class Actions:
         """David wrote this"""
         # if app.platform == "mac":
         applescript.run(f"""set volume input volume {volume}""")
+
+    def run_applescript(s: str) -> str:
+        """This runs an applescript script."""
+        return applescript.run(s)
