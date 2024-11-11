@@ -13,6 +13,11 @@ escape: escape
 space: space
 tab: tab
 insert: insert
-wipe: backspace
+#wipe: backspace
 delete: backspace
-forward delete: delete
+deet: backspace
+deep: backspace
+drill: delete
+for delete: delete
+for deep: delete
+four deep: delete
