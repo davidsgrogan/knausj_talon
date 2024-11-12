@@ -48,7 +48,7 @@ class BrowserActions:
                             or a.startswith("chrome://devtools/")
                         )
                     ]
-                    if len(addresses) == 1:
+                    if len(addresses) >= 1:
                         return addresses[0]
         except (ui.UIErr, AttributeError) as e:
             pass
