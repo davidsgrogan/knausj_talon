@@ -30,5 +30,5 @@ coder:
 
 (term|terminal):
   user.switcher_focus("term")
-chrome:
+chrome | crumb:
   user.switcher_focus("chrome")

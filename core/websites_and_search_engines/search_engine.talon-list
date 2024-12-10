@@ -6,3 +6,4 @@ map: https://maps.google.com/maps?q=%s
 wiki: https://en.wikipedia.org/w/index.php?search=%s
 moma: http://moma/%s
 talon search: https://search.talonvoice.com/search/?q=%s&fold_case=auto&regex=false&context=true
+code search: https://source.chromium.org/search?q=-file:%5Eout%20%s
