@@ -104,8 +104,8 @@ class Actions:
     def mouse_move_center_active_window():
         """Move the mouse cursor to the center of the currently active window"""
         rect = ui.active_window().rect
-(??)    actions.mouse_move(rect.center.x, rect.center.y)
-(??)
+        actions.mouse_move(rect.center.x, rect.center.y)
+
     def mouse_move_center_active_window_if_necessary():
         """move the mouse cursor to the center of the currently active window"""
         x, y = ctrl.mouse_pos()
