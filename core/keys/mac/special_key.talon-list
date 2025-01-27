@@ -9,6 +9,7 @@ return: return
 enter: return
 # enter: keypad_enter
 page down: pagedown
+pay jup: pageup
 page up: pageup
 escape: escape
 space: space

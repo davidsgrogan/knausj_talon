@@ -165,6 +165,7 @@ symbol_key_words = {
     "down score": "_",
     "underscore": "_",
     "paren": "(",
+    "R paren": ")",
     "brack": "{",
     "left brack": "{",
     "R brack": "}",

@@ -21,7 +21,8 @@ tag: browser
 class Actions:
     def open_url(url: str):
         """Visit the given URL."""
-        webbrowser.open(url)
+        dogs = webbrowser.open(url)
+        print("webbrowser.open result: ", dogs)
 
     def search_with_search_engine(search_template: str, search_text: str):
         """Search a search engine for given text"""
