@@ -1,6 +1,8 @@
 list: user.window_snap_positions
 -
 
+my right: my right
+my left: my left
 left: LEFT
 right: RIGHT
 top: TOP

@@ -139,6 +139,9 @@ punctuation_words = {
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
+#    "arboren": ")",
+    "harp paren": ")",
+    "rparen": ")",
     "R paren": ")",
     "right paren": ")",
 }

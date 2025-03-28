@@ -57,5 +57,24 @@ talon dump context:
 ^talon create linux app context$: user.talon_create_app_context("linux")
 ^talon create mac app context$: user.talon_create_app_context("mac")
 
+# restart talon:
+#     key(super-s)
+#     sleep(200ms)
+#     insert("talon")
+#     sleep(200ms)
+#     key(enter)
+#     sleep(500ms)
+#     key(super-b)
+#     sleep(200ms)
+#     key(enter)
+#     sleep(200ms)
+#     key(right:3)
+#     sleep(200ms)
+#     key(enter)
+#     sleep(200ms)
+#     key(up)
+#     sleep(200ms)
+#     key(enter)
+
 talon (bug report | report bug):
     user.open_url("https://github.com/talonhub/community/issues")
