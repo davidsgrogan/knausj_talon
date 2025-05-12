@@ -12,3 +12,5 @@ open paste: user.open_url(clip.text())
 recordings: user.openDirectory('/Users/dgrogan/.talon/recordings')
 plex (downloads | download | sync | directory): user.openDirectory('/Users/dgrogan/Library/Application Support/Plex/Plex Media Server/Sync')
 
+# This doesn't work; tries to open in a browser. At least I have the path saved here.
+voice memos: user.openDirectory('/Users/dgrogan/Library/Group\ Containers/group.com.apple.VoiceMemos.shared/Recordings')

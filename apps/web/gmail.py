@@ -15,7 +15,8 @@ class Actions:
         """Clicks a webpage button with the given text or label."""
         click_AXPopUpButton_on_webpage(text)
 
-
+# Broken as of ~Jan 2025. aegis/nriley suggest
+# you could try something like ctrl.mouse_move(*button.AXFrame.center) and then click
 def click_AXPopUpButton_on_webpage(button_text_or_label: str):
     """Clicks a button on a webpage with the specified AXDescription"""
 
