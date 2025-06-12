@@ -29,6 +29,6 @@ show history: browser.show_history()
 #show cache: browser.show_clear_cache()
 
 open in {user.browsers}: user.open_in(browsers)
-view source: user.view_source()
+theusource | (view source): user.view_source()
 
 ten (close | plus): user.tab_close_wrapper()
