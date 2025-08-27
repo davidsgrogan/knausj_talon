@@ -417,7 +417,7 @@ class UserActions:
             return None
         urlified_string = re.sub(
             '^.*c/1/src/(.+)',
-            r'https://b2a0079e02e94000a44f31a4d1c738b250050000000000000000001.proxy.googleprod.com/c/1/src/\1',
+            r'https://b2a0079e02ea2000790e33bf6ebdb36dc0050000000000000000001.proxy.googleprod.com/c/1/src/\1',
             filename_from_vscode)
         # urlified_string = re.sub('~', '/Users/dgrogan', filename_from_vscode)
         # When above string gets out of date, can just punt on it and always
