@@ -13,7 +13,7 @@ clear screen: user.terminal_clear_screen()
 run last: user.terminal_run_last()
 rerun [<user.text>]: user.terminal_rerun_search(text or "")
 rerun search: user.terminal_rerun_search("")
-halal | (kill all): user.terminal_kill_all()
+hollo | halal | (kill all): user.terminal_kill_all()
 (file | kill) save:
     key("home")
     "# "
