@@ -50,7 +50,7 @@ class Symbol:
 
 currency_symbols = [
     Symbol("$", ["dollar sign"], ["dollar"]),
-    Symbol("£", ["pound sign"], ["pound"]),
+    # Symbol("£", ["pound sign"], ["pound"]),
 ]
 
 symbols = [
@@ -58,7 +58,7 @@ symbols = [
     Symbol(",", ["comma", "coma"]),
     Symbol(".", ["period", "full stop"], ["dot", "point"]),
     Symbol(";", ["semicolon"], ["semi"]),
-    Symbol(":", ["colon"]),
+    Symbol(":", ["colon", "stack"]),
     Symbol("?", ["question mark"], ["question"]),
     Symbol("!", ["exclamation mark", "exclamation point"], ["bang"]),
     Symbol("*", ["asterisk"], ["star"]),
@@ -72,13 +72,13 @@ symbols = [
     Symbol("~", None, ["tilde"]),
     Symbol("_", None, ["down score", "underscore"]),
     Symbol("(", ["paren", "L paren", "left paren"], None),
-    Symbol(")", ["R paren", "right paren"], None),
-    Symbol("[", None,["brack", "L brack", "bracket", "L bracket", "left bracket", "square", "L square", "left square",],),
-    Symbol("]", None, ["R brack", "R bracket", "right bracket", "R square", "right square"]),
+    Symbol(")", ["R paren", "right paren", "harp paren", "rparen"], None),
+    Symbol("[", None, ["L square", "left square", "square"]),
+    Symbol("]", None, ["R square", "right square"]),
     Symbol("/", ["forward slash"], ["slash"]),
     Symbol("\\", None, ["backslash"]),
-    Symbol("{", None, ["brace", "L brace", "left brace", "curly bracket", "left curly bracket"],),
-    Symbol("}", None, ["R brace", "right brace","R curly bracket", "right curly bracket"]),
+    Symbol("{", None, ["brack", "left brack"]),
+    Symbol("}", None, ["R brack", "right brack"]),
     Symbol("<", None, ["angle", "L Angle", "left angle", "less than"]),
     Symbol(">", None, ["rangle", "R angle", "right angle", "greater than"]),
     Symbol("^", None, ["caret"]),
