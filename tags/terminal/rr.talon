@@ -18,7 +18,7 @@ delete <number>: "delete {number}"
 until <number>: "until {number}"
 reverse continue: "rc\n"
 continue: "c\n"
-(fin[ish] | return): "finish\n"
+(fin [ish] | return): "finish\n"
 reverse (fin | finish): "reverse-fin\n"
 cross: key(ctrl-x o)
 off: key(ctrl-x a)
