@@ -1,10 +1,12 @@
 from talon import Context, Module, actions, app
 
 from .symbols import (
-    dragon_punctuation_dict,
     punctuation_dict,
     symbol_key_dict,
 )
+
+# User customization
+punctuation_dict["spamma"] = ", "
 
 mod = Module()
 ctx = Context()
@@ -117,93 +119,6 @@ class Actions:
         """Gets the user.punctuation list"""
         return punctuation_dict
 
-# `punctuation_words` is for words you want available BOTH in dictation and as key names in command mode.
-# `symbol_key_words` is for key names that should be available in command mode, but NOT during dictation.
-punctuation_words = {
-    # TODO: I'm not sure why we need these, I think it has something to do with
-    # Dragon. Possibly it has been fixed by later improvements to talon? -rntz
-    "`": "`",
-    ",": ",",  # <== these things
-    "back tick": "`",
-    "spamma": ", ",
-    "comma": ",",
-    # Workaround for issue with conformer b-series; see #946
-    "coma": ",",
-    "period": ".",
-    "full stop": ".",
-    "semicolon": ";",
-    "semi": ";",
-    "stack": ":",
-    "forward slash": "/",
-    "question mark": "?",
-    "exclamation mark": "!",
-    "exclamation point": "!",
-    "asterisk": "*",
-    "hash sign": "#",
-    "number sign": "#",
-    "percent sign": "%",
-    "at sign": "@",
-    "and sign": "&",
-    "ampersand": "&",
-    # Currencies
-    "dollar sign": "$",
-#    "pound sign": "£",
-    "hyphen": "-",
-    "L paren": "(",
-    "left paren": "(",
-#    "arboren": ")",
-    "harp paren": ")",
-    "rparen": ")",
-    "R paren": ")",
-    "right paren": ")",
-}
-symbol_key_words = {
-    "dot": ".",
-    "point": ".",
-    "quote": "'",
-    "question": "?",
-    "apostrophe": "'",
-    "L square": "[",
-    "left square": "[",
-    "square": "[",
-    "R square": "]",
-    "right square": "]",
-    "slash": "/",
-    "backslash": "\\",
-    "minus": "-",
-    "dash": "-",
-    "equals": "=",
-    "plus": "+",
-    "grave": "`",
-    "tilde": "~",
-    "bang": "!",
-    "down score": "_",
-    "underscore": "_",
-    "paren": "(",
-    "R paren": ")",
-    "brack": "{",
-    "left brack": "{",
-    "R brack": "}",
-    "right brack": "}",
-    "angle": "<",
-    "left angle": "<",
-    "less than": "<",
-    "rangle": ">",
-    "R angle": ">",
-    "right angle": ">",
-    "greater than": ">",
-    "star": "*",
-    "hash": "#",
-    "percent": "%",
-    "caret": "^",
-    "amper": "&",
-    "pipe": "|",
-    "dub quote": '"',
-    "double quote": '"',
-    # Currencies
-    "dollar": "$",
-#    "pound": "£",
-}
 
 ctx.lists["user.punctuation"] = punctuation_dict
 ctx.lists["user.symbol_key"] = symbol_key_dict
