@@ -49,14 +49,16 @@ class UserActions:
     #     ctrl.mouse_move(*position)
 
     def my_toggle_sleep_directly():
-        hs = ui.apps(bundle="info.marcel-dierkes.KeepingYouAwake")[0]
+        # Found via: osascript -e 'id of app "Caffeinated"'
+        hs = ui.apps(bundle="design.yugen.Caffeinated")[0]
         hs_menu_extra = hs.element.AXExtrasMenuBar.children.find_one(
             AXRole="AXMenuBarItem", AXSubrole="AXMenuExtra", max_depth=0
         )
-        try:
-            hs_menu_extra.perform("AXPress")
-        except BaseException:
-            pass  # This appears to fail but doesn't
+        old_pos = ctrl.mouse_pos()
+        rect = hs_menu_extra.AXFrame
+        ctrl.mouse_move(rect.x + rect.width / 2, rect.y + rect.height / 2)
+        ctrl.mouse_click(button=0)
+        ctrl.mouse_move(*old_pos)
 
 @mod.action_class
 class Actions:
