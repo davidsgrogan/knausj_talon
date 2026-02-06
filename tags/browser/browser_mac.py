@@ -30,9 +30,12 @@ class BrowserActions:
             return ""
         try:
             # for Firefox and Chromium-based browsers (if accessibility available)
+            # Why the flying dick does chrome include chrome://newtab-footer/
+            # so often??
             addresses = [
                 web_area.AXURL for web_area in window.children.find(AXRole="AXWebArea")
             ]
+            # print(len(addresses), ":", addresses)
             match len(addresses):
                 case 0:
                     pass
@@ -46,6 +49,7 @@ class BrowserActions:
                             a.startswith("devtools:")
                             or a.startswith("about:devtools")
                             or a.startswith("chrome://devtools/")
+                            or a.startswith("chrome://newtab-footer/")
                         )
                     ]
                     if len(addresses) >= 1:
