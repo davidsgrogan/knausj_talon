@@ -26,16 +26,66 @@ class BrowserActions:
         try:
             window = ui.active_app().windows()[0]
         except IndexError:
-            # print("no windows, returning empty string")
+            print("no windows, returning empty string from browser_mac.address")
             return ""
+
+        valid_prefixes = (
+            "http://",
+            "https://",
+            "file://",
+            "chrome://",
+            "devtools://",
+            "about:")
+
+        # 1. Appscript queries chrome directly instead of the macOS a11y API
         try:
-            # for Firefox and Chromium-based browsers (if accessibility available)
-            # Why the flying dick does chrome include chrome://newtab-footer/
-            # so often??
+            # Grab the appscript reference for the entire application, NOT the
+            # specific window
+            app_ref = ui.active_app().appscript()
+
+            # Ask the app directly for its frontmost window
+            front_window = app_ref.windows.first
+
+            if tab := getattr(front_window, "active_tab", None):
+                url = tab.URL()
+                if url and url.startswith(valid_prefixes):
+                    return url
+        except Exception as e:
+            # -1728 errors happen here during split-second tab switches.
+            print(
+                f"appscript attempt got {e}, browser_mac.address is falling back to actions.next()")
+
+        print("now trying window.doc")
+        doc_url = getattr(window, "doc", "") or ""
+        if doc_url.startswith(valid_prefixes):
+            return doc_url
+        print(
+            f"window.doc was blank or abnormal --- {doc_url} ---. Next trying AXTextField ...")
+
+        try:
+            # Search specifically for the text field labeled "Address and search
+            # bar"
+            address_bars = window.children.find(
+                AXRole="AXTextField",
+                AXDescription="Address and search bar",
+                max_depth=10
+            )
+            if address_bars:
+                # The actual URL string is stored in the AXValue property
+                url = address_bars[0].AXValue
+                print(f"Found URL from address_bars: {url}")
+                return url
+            else:
+                print("Address bar not found.")
+        except Exception as e:
+            print(f"Error grabbing address bar: {e}")
+
+        try:
+            print("Now trying to look for AXWebArea")
             addresses = [
                 web_area.AXURL for web_area in window.children.find(AXRole="AXWebArea")
             ]
-            # print(len(addresses), ":", addresses)
+            print("addresses from AXWebArea", len(addresses), ":", addresses)
             match len(addresses):
                 case 0:
                     pass
@@ -55,15 +105,10 @@ class BrowserActions:
                     if len(addresses) >= 1:
                         return addresses[0]
         except (ui.UIErr, AttributeError) as e:
-            pass
-        try:
-            # for Chromium-based browsers (if scripting available)
-            front_window = window.appscript()
-            if tab := getattr(front_window, "active_tab", None):
-                return tab.URL()
-            return ""
-        except:
-            return actions.next()
+            print("got exception looking for AXWebArea", e)
+
+        print("now browser_mac.address is falling back :(")
+        return actions.next()
 
     def bookmark():
         actions.key("cmd-d")

@@ -132,16 +132,20 @@ class BrowserActions:
     def address() -> str:
         title: str = actions.win.title()
         if not title:
+            print("browser.py.address no title so retturning empty string")
             return ""
 
         # We expect the URL to either be prepended or appended to the page title.
+        print("actions.win.title is", title)
         first, *tokens = title.split()
         if is_url(first):
+            print("returning first", first)
             return first
 
         # Prioritize last one if multiple are valid.
         for url in reversed(tokens):
             if is_url(url):
+                print("returning is_url", url)
                 return url
             # The URL may be in [brackets].
             unbracketed = url[1:-1]
@@ -149,6 +153,7 @@ class BrowserActions:
                 return unbracketed
 
         # None were valid.
+        print("browser.address: none were valid, empty string")
         return ""
 
     def bookmark():
